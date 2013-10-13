@@ -1,0 +1,176 @@
+#header {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.align-center {
+    text-align: center;
+}
+
+#resume {
+    background-color: white;
+    position: relative;
+}
+
+.resume-padding-18 {
+    padding-left:18px;
+    padding-right:18px;
+}
+
+.hideable {
+    display: none;
+}
+
+.resume-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.resume-item-title {
+    color: #D80000;
+}
+
+.no-bullet-list {
+     list-style-type: none;
+}
+
+.contact-footer {
+    color: grey;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: x-large;
+    color: white;
+}
+
+.resume-item-title h1 {
+    font-size: xx-large;
+    font-family: 'Pacifico', cursive;
+}
+
+#toggle-blob-row {
+    display: none;
+}
+
+.blob-success {
+    color: #5CB85C;
+}
+.blob-primary {
+    color: #428BCA;
+}
+
+.blob-error {
+    color: #D9534F;
+}
+@media screen and (min-width: 1140px) {
+    body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: medium;
+	background-image: url('/static/img/blurry_back.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+    }
+    
+    #resume-wide {
+	background-color: white;
+	z-index: 9;
+	position: relative;
+	padding-bottom:25px;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .my-resume-title {
+	width:100%;
+	text-align:center;
+	font-size:xx-large;
+	position:fixed;
+	z-index: 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 144px;
+	color: white;
+	text-shadow: 4px 4px 0 #444444;
+	top: 172px;
+    }
+    
+    .pre-title-anchor {
+	height: 100px;
+    }
+
+    #map-small {
+	display: none;
+    }
+    
+    #main404 {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: 200px;
+	font-family: 'Oswald', sans-serif;
+	color: #444444;
+	background-color: white;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    }
+
+}
+
+@media screen and (max-width: 1140px) {
+    body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: medium;
+	background-color: white;
+    }
+
+    .my-resume-title {
+	width:100%;
+	text-align:center;
+	font-size:xx-large;
+	font-family: 'Oswald', sans-serif;
+	font-size: 72px;
+	color: white;
+	text-shadow: 4px 4px 0 #444444;
+	height:300px;
+	padding-top: 150px;
+	background-image: url('/static/img/blurry_back.jpg');
+	background-size: cover;
+    }
+    
+    .blurry-back {
+	display: none;
+    }
+
+    .pre-title-anchor {
+	height: 75px;
+    }
+
+    #map-large {
+	display: none;
+    }
+    
+    #main404 {
+	font-family: 'Oswald', sans-serif;
+	color: #444444;
+    }
+}
+
+#heading404 {
+    text-align:center;
+    font-size: 144px;
+}
+
+#content404 {
+    font-size: x-large;
+}
+
+#footer404 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-success {
+    box-shadow: 0 4px #388038;
+}
+
+.btn-primary {
+    box-shadow: 0 4px #2b6699;
+}
