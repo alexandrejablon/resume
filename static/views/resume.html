@@ -14,68 +14,75 @@
     <body>
 	<div id="home"></div>
 	<div class="my-resume-title">MY RESUME</div>
-	<div class="blurry-back" style="height: 488px"></div>
+	<div class="blurry-back" style="height: 408px"></div>
 	<div id="resume-wide">
 	    <div class="container" id="resume">
+		<div class="resume-item-title" style="text-align:center">
+		    <h1>Loading...</h1>
+		</div>
 	    </div>
-	    <div id="blob"></div>
+	    <hr/>
+	    <div class="contact-footer">
+		<ul class="no-bullet-list">
+		    <li>&copy; Alexandre Jablon 2013</li>
+		    <li>alex@jablon.me | alexandre.jablon@gmail.com</li>
+		</ul>
+	    </div>
 	</div>
-	<div class="blurry-back" style="height: 88px;"></div>
 	<script type="text/template" id="resume-template">
-	
-	<nav id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
-	    <div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-		    <span>Toggle navigation</span>
-		</button>
-		<span class="navbar-brand">Alexandre Jablon</span>
-	    </div>
-	    <div class="collapse navbar-collapse navbar-ex1-collapse">
-		<ul class="nav navbar-nav navbar-left">
-		    <li style="padding:5px"><img src="/static/img/me.jpg" alt="me" style="width:65px;height:65px;" class="img-circle"/></li>
-		    <li>
-			<a class="smooth-scroller" href="#home">
-			    <span class="glyphicon glyphicon-arrow-up"></span>
-			</a>
-		    </li>
-		    <li>
-			<a class="smooth-scroller" href="#education">
-			    <span class="glyphicon glyphicon-cog"></span>
-			    Education
-			</a>
-		    </li>
-		    <li>
-			<a class="smooth-scroller" href="#career">
-			    <span class="glyphicon glyphicon-thumbs-up"></span>
-			    Career
-			</a>
-		    </li>
-		    <li>
-			<a class="smooth-scroller" href="#places">
-			    <span class="glyphicon glyphicon-plane"></span>
-			    More about me
-			</a>
-		    </li>
-		    <li>
-			<a class="smooth-scroller" href="#now">
-			    <span class="glyphicon glyphicon-fire"></span>
-			    What I'm currently doing
-			</a>
-		    </li>
-		    <li>
-			<a class="smooth-scroller" href="#contact">
-			    <span class="glyphicon glyphicon-envelope"></span>
-			    Contact Me
-			</a>
-		    </li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-		    <li>
-			<a class="smooth-scroller">I&#39;m <i><%= status %></i>.</a>
-		    </li>
-		</ul>
-	    </div>
-	</nav>
+	    <nav id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span>Toggle navigation</span>
+		    </button>
+		    <span class="navbar-brand">Alexandre Jablon</span>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+		    <ul class="nav navbar-nav navbar-left">
+			<li style="padding:5px"><img src="/static/img/me.jpg" alt="me" style="width:65px;height:65px;" class="img-circle"/></li>
+			<li>
+			    <a class="smooth-scroller" href="#home">
+				<span class="glyphicon glyphicon-arrow-up"></span>
+			    </a>
+			</li>
+			<li>
+			    <a class="smooth-scroller" href="#education">
+				<span class="glyphicon glyphicon-cog"></span>
+				Education
+			    </a>
+			</li>
+			<li>
+			    <a class="smooth-scroller" href="#career">
+				<span class="glyphicon glyphicon-thumbs-up"></span>
+				Career
+			    </a>
+			</li>
+			<li>
+			    <a class="smooth-scroller" href="#places">
+				<span class="glyphicon glyphicon-plane"></span>
+				More about me
+			    </a>
+			</li>
+			<li>
+			    <a class="smooth-scroller" href="#now">
+				<span class="glyphicon glyphicon-fire"></span>
+				What I'm currently doing
+			    </a>
+			</li>
+			<li>
+			    <a class="smooth-scroller" href="#contact">
+				<span class="glyphicon glyphicon-envelope"></span>
+				Contact Me
+			    </a>
+			</li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+			<li>
+			    <a class="smooth-scroller">I&#39;m <i><%= status %></i>.</a>
+			</li>
+		    </ul>
+		</div>
+	    </nav>
 	<!-- Education Section -->
 	    <div id="<%= education['id'] %>" class="pre-title-anchor"></div>
 	    <div class="row resume-row resume-item-title"> 
@@ -273,15 +280,6 @@
 			</div>
 		    </form>
 		</div>
-	    </div>
-	    <div class="row">
-		<hr/>
-	    </div>
-	    <div class="row resume-row contact-footer">
-		<ul class="no-bullet-list">
-		    <li>&copy; Alexandre Jablon 2013</li>
-		    <li>alex@jablon.me | alexandre.jablon@gmail.com</li>
-		</ul>
 	    </div>
 	</script>
 	<script type="text/template" id="blob-template">
