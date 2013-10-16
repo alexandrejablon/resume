@@ -75,6 +75,5 @@ exports.robots = function (req, res) {
 };
 
 exports.fourofour = function (req, res) {
-    res.status (404);
-    res.sendfile(__dirname + '/static/views/404.html');
+    res.status ( 404 ).sendfile( __dirname + '/static/views/404.html' );
 };
