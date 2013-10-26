@@ -70,10 +70,14 @@ exports.blob = function (req, res) {
 };
 
 exports.robots = function (req, res) {
-    res.set('Content-Type', 'text/plain');
-    res.send(200, 'User-agent: *\nDisallow: /');
+    res.set( 'Content-Type', 'text/plain' );
+    res.send( 200, 'User-agent: Googlebot\nAllow: /\nUser-agent: *\nDisallow: /' );
 };
 
 exports.fourofour = function (req, res) {
     res.status ( 404 ).sendfile( __dirname + '/static/views/404.html' );
 };
+
+exports.linkedin = function (req, res) {
+    res.redirect( 'http://www.linkedin.com/pub/alexandre-jablon/3b/b25/3a9/' );
+}

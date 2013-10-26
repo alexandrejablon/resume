@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<title>Alexandre Jablon Resume</title>
+	<title>Alex Jablon &mdash; My Resume</title>
 	<link rel="icon" type="image/png" href="/static/img/a.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="I'm an engineering student in Lyon, France, and this is my resume =)">
 	<link href="/static/libs/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" />
 	<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
@@ -24,63 +25,61 @@
 	    <hr/>
 	    <div class="contact-footer">
 		<ul class="no-bullet-list">
-		    <li>&copy; Alexandre Jablon 2013</li>
+		    <li>&copy; Alex Jablon 2013</li>
+		    <li>alex.jablon.me</li>
 		    <li>alex@jablon.me | alexandre.jablon@gmail.com</li>
+		    <li>alex.jablon.me/linkedin</li>
 		</ul>
 	    </div>
 	</div>
 	<script type="text/template" id="resume-template">
 	    <nav id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="navbar-header">
-		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			<span>Toggle navigation</span>
-		    </button>
-		    <span class="navbar-brand">Alexandre Jablon</span>
-		</div>
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-		    <ul class="nav navbar-nav navbar-left">
-			<li style="padding:5px"><img src="/static/img/me.jpg" alt="me" style="width:65px;height:65px;" class="img-circle"/></li>
-			<li>
-			    <a class="smooth-scroller" href="#home">
-				<span class="glyphicon glyphicon-arrow-up"></span>
-			    </a>
-			</li>
-			<li>
-			    <a class="smooth-scroller" href="#education">
-				<span class="glyphicon glyphicon-cog"></span>
-				Education
-			    </a>
-			</li>
-			<li>
-			    <a class="smooth-scroller" href="#career">
-				<span class="glyphicon glyphicon-thumbs-up"></span>
-				Career
-			    </a>
-			</li>
-			<li>
-			    <a class="smooth-scroller" href="#places">
-				<span class="glyphicon glyphicon-plane"></span>
-				More about me
-			    </a>
-			</li>
-			<li>
-			    <a class="smooth-scroller" href="#now">
-				<span class="glyphicon glyphicon-fire"></span>
-				What I'm currently doing
-			    </a>
-			</li>
-			<li>
-			    <a class="smooth-scroller" href="#contact">
-				<span class="glyphicon glyphicon-envelope"></span>
-				Contact Me
-			    </a>
-			</li>
-		    </ul>
-		    <ul class="nav navbar-nav navbar-right">
-			<li>
-			    <a class="smooth-scroller">I&#39;m <i><%= status %></i>.</a>
-			</li>
-		    </ul>
+		<div class="container">
+		    <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			    <span>Toggle navigation</span>
+			</button>
+			<span class="navbar-brand">Alex Jablon</span>
+		    </div>
+		    <div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav navbar-left">
+			    <li style="padding:5px"><img src="/static/img/me.jpg" alt="me" style="width:65px;height:65px;" class="img-circle"/></li>
+			    <li>
+				<a class="smooth-scroller" href="#home">
+				    <span class="glyphicon glyphicon-arrow-up"></span>
+				</a>
+			    </li>
+			    <li>
+				<a class="smooth-scroller" href="#education">
+				    <span class="glyphicon glyphicon-cog"></span>
+				    Education
+				</a>
+			    </li>
+			    <li>
+				<a class="smooth-scroller" href="#career">
+				    <span class="glyphicon glyphicon-thumbs-up"></span>
+				    Career
+				</a>
+			    </li>
+			    <li>
+				<a class="smooth-scroller" href="#places">
+				    <span class="glyphicon glyphicon-plane"></span>
+				    More about me
+				</a>
+			    </li>
+			    <li>
+				<a class="smooth-scroller" href="#contact">
+				    <span class="glyphicon glyphicon-envelope"></span>
+				    Contact Me
+				</a>
+			    </li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			    <li>
+				<a class="smooth-scroller">I&#39;m <i><%= status %></i>.</a>
+			    </li>
+			</ul>
+		    </div>
 		</div>
 	    </nav>
 	<!-- Education Section -->
@@ -232,7 +231,7 @@
 	    <div class="row resume-row">
 		<div class="col-lg-12">
 		    <div class="align-center">
-			<a type="button" class="btn btn-primary" href="http://fr.linkedin.com/pub/alexandre-jablon/3b/b25/3a9/" target="_blank">
+			<a type="button" class="btn btn-primary" href="/linkedin" target="_blank">
 			
 			My Linked<img src="/static/img/in.png" alt="in"/> profile
 			</a>
@@ -245,7 +244,7 @@
 		    <div class="align-center">
 			<a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
 			<span class="glyphicon glyphicon-envelope"></span>
-			Send me an email !
+			Send me a message !
 			</a>
 		    </div>
 		</div>

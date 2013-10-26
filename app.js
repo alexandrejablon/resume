@@ -7,7 +7,6 @@ app.use('/static/css', express.static(__dirname + '/static/css'));
 app.use('/static/img', express.static(__dirname + '/static/img'));
 app.use('/static/js', express.static(__dirname + '/static/js'));
 app.use('/static/fonts', express.static(__dirname + '/static/fonts'));
-app.use('/static/views', express.static(__dirname + '/static/views'));
 app.use('/static/libs', express.static(__dirname + '/static/libs'));
 
 app.use(express.bodyParser());
@@ -19,6 +18,8 @@ app.get ('/get_resume', resume.get_resume);
 app.post ('/blob', resume.blob);
 
 app.all ('/robots.txt', resume.robots);
+
+app.get ( '/linkedin', resume.linkedin );
 
 app.all ('*', resume.fourofour);
 

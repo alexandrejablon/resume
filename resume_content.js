@@ -60,7 +60,7 @@ exports.resume = {
 	id: 'now',
 	name: 'Work4',
 	image: 'work4.png',
-	content: '<ul class="no-bullet-list"><li> &ndash; I&#8217;m currently working at <b>Work4, the #1 Facebook Recruiting Solution</b>, in Paris, France.</li><li> &ndash; We make a great Facebook Application to enable our customers to recruit talented people in a smarter way and we&#8217;re pioneering the world of Social Recruiting!</li></ul>'
+	content: '<ul class="no-bullet-list"><li> &ndash; I&#8217;m currently doing an internship at <b>Work4, the #1 Facebook Recruiting Solution</b>, in Paris, France.</li><li> &ndash; We make a great Facebook application to enable our customers to recruit talented people in a smarter way and we&#8217;re pioneering the world of Social Recruiting!</li></ul>'
     },
     interests: {
 	heading: 'Topics of interests',
