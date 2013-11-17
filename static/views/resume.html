@@ -2,22 +2,39 @@
 <html>
     <head>
 	<title>Alex Jablon &mdash; My Resume</title>
-	<link rel="icon" type="image/png" href="/static/img/a.png" />
+	<link rel="icon" type="image/png" href="/static/img/AJ.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="I'm an engineering student in Lyon, France, and this is my resume =)">
 	<link href="/static/libs/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" />
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-glyphicons.css" rel="stylesheet" />
 	<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
-	<link href='//fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css' />
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
 	<link href="/static/css/resume.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 	<div id="home"></div>
-	<div class="my-resume-title">MY RESUME</div>
-	<div class="blurry-back" style="height: 408px"></div>
+	<div class="my-resume-title">
+	    <div class="container">
+		<div class="row">
+		    <div class="col-lg-6 col-sm-6 my-resume-title-left">
+			<ul class="no-bullet-list">
+			    <li><img src="/static/img/me.png" width="100" alt="me" /> <img src="/static/img/AJ.png" width="100" alt="me" /></li>
+			    <li>Alex Jablon</li>
+			</ul>
+		    </div>
+		    <div class="col-lg-6 col-sm-6 my-resume-title-right">
+			<ul class="no-bullet-list">
+			    <li>alex.jablon.me</li>
+			    <li>alex@jablon.me</li>
+			    <li><a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </div>
+	</div>
+	<div class="blurry-back" style="height: 308px"></div>
 	<div id="resume-wide">
-	    <div class="container" id="resume">
+	    <div id="resume" class="container">
 		<div class="resume-item-title" style="text-align:center">
 		    <h1>Loading...</h1>
 		</div>
@@ -25,79 +42,33 @@
 	    <hr/>
 	    <div class="contact-footer">
 		<ul class="no-bullet-list">
-		    <li>&copy; Alex Jablon 2013</li>
+		    <li>&copy; Alexandre Jablon 2013</li>
 		    <li>alex.jablon.me</li>
 		    <li>alex@jablon.me | alexandre.jablon@gmail.com</li>
-		    <li>alex.jablon.me/linkedin</li>
+		    <li><a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
 		</ul>
 	    </div>
 	</div>
 	<script type="text/template" id="resume-template">
-	    <nav id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-		    <div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-			    <span>Toggle navigation</span>
-			</button>
-			<span class="navbar-brand">Alex Jablon</span>
-		    </div>
-		    <div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav navbar-left">
-			    <li style="padding:5px"><img src="/static/img/me.jpg" alt="me" style="width:65px;height:65px;" class="img-circle"/></li>
-			    <li>
-				<a class="smooth-scroller" href="#home">
-				    <span class="glyphicon glyphicon-arrow-up"></span>
-				</a>
-			    </li>
-			    <li>
-				<a class="smooth-scroller" href="#education">
-				    <span class="glyphicon glyphicon-cog"></span>
-				    Education
-				</a>
-			    </li>
-			    <li>
-				<a class="smooth-scroller" href="#career">
-				    <span class="glyphicon glyphicon-thumbs-up"></span>
-				    Career
-				</a>
-			    </li>
-			    <li>
-				<a class="smooth-scroller" href="#places">
-				    <span class="glyphicon glyphicon-plane"></span>
-				    More about me
-				</a>
-			    </li>
-			    <li>
-				<a class="smooth-scroller" href="#contact">
-				    <span class="glyphicon glyphicon-envelope"></span>
-				    Contact Me
-				</a>
-			    </li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-			    <li>
-				<a class="smooth-scroller">I&#39;m <i><%= status %></i>.</a>
-			    </li>
-			</ul>
-		    </div>
-		</div>
-	    </nav>
 	<!-- Education Section -->
-	    <div id="<%= education['id'] %>" class="pre-title-anchor"></div>
-	    <div class="row resume-row resume-item-title"> 
-		<div class="col-lg-12 align-center"><h1 class="align-center"><%= education['heading'] %></h1></div>
+	    <div class="row resume-row resume-item-title" style="margin:0">
+		<div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center"><%= education['heading'] %></h1></div>
 	    </div>
-	    <% _.each (education['content'], function (item, index, list) { %>
-		<div class="row resume-row">
-		    <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-		    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+	    <div class="row resume-row" style="margin:0">
+		<div class="col-lg-12">
+		    <% _.each (education['content'], function (item, index, list) { %>
+			<div class="row resume-row">
+			    <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
+			    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+			</div>
+			<% if (index < list.length || index != 1) { %>
+			    <div class="row resume-row <%= education['name'] %>-hideable hideable">
+				<div class="col-lg-12 align-center"> &mdash; </div>
+			    </div>
+			<% } %>
+		    <% }); %>
 		</div>
-		<% if (index < list.length || index != 1) { %>
-		    <div class="row resume-row <%= education['name'] %>-hideable hideable">
-			<div class="col-lg-12 align-center"> &mdash; </div>
-		    </div>
-		<% } %>
-	    <% }); %>
+	    </div>
 	<!-- Career Section -->
 	    <div id="<%= career['id'] %>" class="pre-title-anchor"></div>
 	    <div class="row resume-row resume-item-title"> 

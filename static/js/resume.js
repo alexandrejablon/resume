@@ -21,16 +21,6 @@ ResumeView = Backbone.View.extend({
 	this.$el.html(template);
 	
 	this.$(".tooltip-origin").tooltip();
-	$('body').scrollspy({ target: '#header' })
-	
-	// Smooth scrolling
-	var $root = $('html, body');
-	this.$('.smooth-scroller').click(function() {
-	    $root.animate({
-		scrollTop: $( $.attr(this, 'href') ).offset().top
-	    }, 500);
-	    return false;
-	});
     },
     toggleInfo: function (event) {
 	item_name = event.currentTarget.dataset.content;
