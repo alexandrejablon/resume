@@ -181,3 +181,7 @@
 .btn-primary {
     box-shadow: 0 4px #2b6699;
 }
+
+.btn-default {
+    box-shadow: 0 4px lightgrey;
+}
