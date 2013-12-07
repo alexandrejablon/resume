@@ -18,11 +18,11 @@ app.get ( '/get_resume', resume.get_resume );
 
 app.post ( '/blob', resume.blob );
 
-app.all ( '/robots.txt', resume.robots );
+app.get ( '/robots.txt', resume.robots );
 
 app.get ( '/linkedin', resume.linkedin );
 
-app.all ( '*', resume.fourofour );
+app.get ( '*', resume.fourofour );
 
 app.listen ( 8000 );
 console.log ( 'Listening on port 8000' );
