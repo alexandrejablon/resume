@@ -34,7 +34,7 @@ exports.blob = function (req, res) {
 	    if ( redisRes === null ) {
 		res.send ( { 'status': 3 } );
 	    } else {
-		if ( req.body.blobFrom !== "" && req.body.blobContent !== "" ) {
+		if ( req.body.blobFrom && req.body.blobContent ) {
 		    var smtpTransport = nodemailer.createTransport ("SMTP", {
 			service: "Gmail",
 			auth: {
