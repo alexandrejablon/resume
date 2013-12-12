@@ -132,12 +132,10 @@
     .my-resume-title {
 	width:100%;
 	font-size: 72px;
-	color: white;
-	text-shadow: 1px 1px 0 #444444;
+	color: #555;
+	text-shadow: 1px 1px 0 #AAA;
 	padding-top:50px;
 	height:300px;
-	background-image: url('/static/img/blurry_back.jpg');
-	background-size: cover;
 	font-weight: bold;
     }
 
