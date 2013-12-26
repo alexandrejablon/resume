@@ -130,16 +130,8 @@ exports.resume = {
 	icon: 'node',
       },
       {
-	name: 'backbone.js',
-	icon: 'backbone',
-      },
-      {
-	name: 'underscore.js',
-	icon: 'underscore',
-      },
-      {
-	name: 'jQuery',
-	icon: 'jquery',
+	name: 'backbone.js, underscore.js, jQuery',
+	icon: 'js_stuff',
       },
       {
 	name: 'Twitter&#39;s Bootstrap',
@@ -156,6 +148,10 @@ exports.resume = {
       {
 	name: 'MongoDB',
 	icon: 'mongo',
+      },
+      {
+	name: 'RethinkDB',
+	icon: 'rethinkdb',
       },
       {
 	name: 'The GIMP',
