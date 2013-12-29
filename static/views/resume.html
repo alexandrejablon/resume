@@ -1,274 +1,284 @@
 <!DOCTYPE html>
 <html>
-    <head>
-	<title>Alex Jablon &mdash; My Resume</title>
-	<link rel="icon" type="image/png" href="/static/img/AJ.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="I'm an engineering student in Lyon, France, and this is my resume =)">
-	<link href="/static/libs/css/bootstrap.min.css" rel="stylesheet" />
-	<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
-	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
-	<link href="/static/css/resume.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-	<div id="home"></div>
-	<div class="my-resume-title">
-	    <div class="container">
-		<div class="row">
-		    <div class="col-lg-6 my-resume-title-left">
-			<ul class="no-bullet-list">
-			    <li><img src="/static/img/me.png" width="100" alt="me" /></li>
-			    <li>Alex Jablon</li>
-			</ul>
-		    </div>
-		    <div class="col-lg-6 my-resume-title-right">
-			<ul class="no-bullet-list">
-			    <li>alex.jablon.me</li>
-			    <li>alex@jablon.me</li>
-			    <li><a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
-			</ul>
-		    </div>
-		</div>
-	    </div>
+  <head>
+    <title>Alex Jablon &mdash; My Resume</title>
+    <link rel="icon" type="image/png" href="/static/img/AJ.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I'm an engineering student in Lyon, France, and this is my resume =)">
+    <link href="/static/libs/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
+    <link href="/static/css/resume.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="home"></div>
+
+    <div class="my-resume-title">
+      <div class="container">
+	<div class="row">
+	  <div class="col-lg-6 my-resume-title-left">
+	    <ul class="no-bullet-list">
+	      <li><img src="/static/img/me.png" width="100" alt="me" /></li>
+	      <li>Alex Jablon</li>
+	    </ul>
+	  </div>
+	  <div class="col-lg-6 my-resume-title-right">
+	    <ul class="no-bullet-list">
+	      <li>alex.jablon.me</li>
+	      <li>alex@jablon.me</li>
+	      <li><a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
+	    </ul>
+	  </div>
 	</div>
-	<div class="blurry-back" style="height: 308px"></div>
-	<div id="resume-wide">
-	    <div id="resume" class="container">
-		<div class="resume-item-title" style="text-align:center">
-		    <h1>Loading...</h1>
-		</div>
-	    </div>
-	    <hr/>
-	    <div class="contact-footer">
-		<ul class="no-bullet-list">
-		    <li>&copy; Alexandre Jablon 2013</li>
-		    <li>alex.jablon.me</li>
-		    <li>alex@jablon.me | alexandre.jablon@gmail.com</li>
-		    <li><a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
-		</ul>
-	    </div>
+      </div>
+    </div>
+
+    <div class="blurry-back" style="height: 308px"></div>
+    <div id="resume-wide">
+      <div id="resume" class="container">
+	<div class="resume-item-title" style="text-align:center">
+	  <h1>Loading...</h1>
 	</div>
-	<script type="text/template" id="resume-template">
-	<!-- Education Section -->
-	    <div class="row resume-row resume-item-title" style="margin:0">
-		<div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center"><%= education['heading'] %></h1></div>
-	    </div>
-	    <div class="row resume-row" style="margin:0">
-		<div class="col-lg-12">
-		    <% _.each (education['content'], function (item, index, list) { %>
-			<div class="row resume-row">
-			    <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-			    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
-			</div>
-			<% if (index < list.length || index != 1) { %>
-			    <div class="row resume-row <%= education['name'] %>-hideable hideable">
-				<div class="col-lg-12 align-center"> &mdash; </div>
-			    </div>
-			<% } %>
-		    <% }); %>
-		</div>
-	    </div>
-	<!-- Career Section -->
-	    <div id="<%= career['id'] %>" class="pre-title-anchor"></div>
-	    <div class="row resume-row resume-item-title"> 
-		<div class="col-lg-12 align-center"><h1 class="align-center"><%= career['heading'] %></h1></div>
-	    </div>
-	    <% _.each (career['content'], function (item, index, list) { %>
-		<% if (index == 0) { %>
-		    <div class="row resume-row">
-		<% } else { %>
-		    <div class="row resume-row <%= career['id'] %>-hideable hideable">
-		<% } %>
-			<div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-			<div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
-		    </div>
-		<% if (index == 0) { %>
-		    <div class="row resume-row">
-			<div class="col-lg-12 align-center">
-			    <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= career ['id'] %>">
-				<span class="btn-text-<%= career['id'] %>">See more...</span>
-				<span class="btn-text-<%= career['id'] %>" style="display:none;">See less...</span>
-				<span class="glyphicon  btn-icon-<%= career['id'] %> glyphicon-chevron-down"></span>
-			    </span>
-			</div>
-		    </div>
-		<% } %>
-		<% if (index < (list.length - 1) && index != 0) { %>
-		    <div class="row resume-row <%= career['id'] %>-hideable hideable">
-			<div class="col-lg-12 align-center"> &mdash; </div>
-		    </div>
-		<% } %>
-	    <% }); %>
-	    <div id="<%= places['id'] %>" class="pre-title-anchor" data-content="<%= places['heading'] %>"></div>
-	
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center"><%= places['heading'] %></h1>
-		</div>
-	    </div>
-	    <div class="row resume-row">
-		<div id="map-small" class="col-xs-12">
-		    <img class="img-responsive" src="/static/img/map_small.jpg" />
-		</div>
-		<div id="map-large" class="col-lg-12">
-		    <% _.each (places['content'], function (place) { %>
-			<img class="tooltip-origin" src="/static/img/<%= place['type'] %>.png" style="position:absolute;margin-left: <%= place['xcoord'] - 17 %>px;margin-top: <%= place['ycoord'] - 40 %>px " alt="<%= place['name'] %>" href="#" data-toggle="tooltip" title="<%= place['name'] %>"/>
-		    <% }); %>
-		    <img src="/static/img/map_large.jpg" />
-		</div>
-	    </div>
-	    
-	    <div id="<%= projects['id'] %>" class="pre-title-anchor" data-content="<%= projects['heading'] %>"></div>
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center"><%= projects['heading'] %></h1>
-		</div>
-	    </div>
-	    <div class="row resume-row">
-		<div class="col-lg-12">
-		    <% _.each (projects['content'], function (project) { %>
-			<div class="col-lg-2"><div class="resume-padding-18"><%= project['key'] %></div></div>
-			<div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project['content'] %></div></div>
-		    <% }); %>
-		</div>
-	    </div>
-	    
-	    <div id="<%= interests['id'] %>" class="pre-title-anchor" data-content="<%= interests['heading'] %>"></div>
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center"><%= interests['heading'] %></h1>
-		</div>
-	    </div>
-	    <div class="row resume-row">
-		<div class="col-lg-12">
-		    <%= interests['content'] %>
-		</div>
-	    </div>
-	    
-	    <div id="<%= now['id'] %>" class="pre-title-anchor" data-content="<%= now['heading'] %>"></div>
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center"><%= now['heading'] %></h1>
-		</div>
-	    </div>
-	    <div class="row resume-row">
-		<div class="col-lg-3 col-xs-3">
-		    <img src="/static/img/<%= now['image'] %>" alt="<%= now['name'] %>" class="img-thumbnail"/>
-		</div>
-		<div class="col-lg-9 col-xs-9">
-		    <p><%= now['content'] %></p>
-		</div>
-	    </div>
+      </div>
+      <hr/>
+      <div class="contact-footer">
+	<ul class="no-bullet-list">
+	  <li>&copy; Alexandre Jablon 2013</li>
+	  <li>alex.jablon.me</li>
+	  <li>alex@jablon.me | alexandre.jablon@gmail.com</li>
+	  <li><a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
+	</ul>
+      </div>
+    </div>
 
-	    <div id="<%= currents['id'] %>" class="pre-title-anchor" data-content="<%= currents['heading'] %>"></div>
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center"><%= currents['heading'] %></h1>
-		</div>
-	    </div>
-	    <% _.each (currents['content'], function (current, index, list) { %>
-		<% if (index % 4 === 0) { %>
-		    <div class="row resume-row">
-		<% } %>
-		    <div class="col-lg-3 col-xs-3 align-center">
-			<img class="img-thumbnail tooltip-origin" src="/static/img/<%= current['icon'] %>.png" alt="<%= current['name'] %>" data-toggle="tooltip" title="<%= current['name'] %>" data-placement="bottom"/>
-		    </div>
-		<% if (index % 4 === 3 || index == (list.length -1)) { %>
-		    </div>
-		<% } %>
-		<% index++; %>
-	    <% }); %>
-	    
-	    <div class="pre-title-anchor"></div>
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center"><%= this_site['heading'] %></h1>
-		</div>
-	    </div>
+    <script type="text/template" id="resume-template">
+      <!-- Education Section -->
+      <div class="row resume-row resume-item-title" style="margin:0">
+	<div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center"><%= education['heading'] %></h1></div>
+      </div>
+      <div class="row resume-row" style="margin:0">
+	<div class="col-lg-12">
+	  <% _.each (education['content'], function (item, index, list) { %>
 	    <div class="row resume-row">
-		<div class="col-lg-12">
-		    <%= this_site['content'] %>
-		</div>
+	      <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
+	      <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
 	    </div>
-
-	    <div id="<%= contact['id'] %>" class="pre-title-anchor" data-content="<%= contact['heading'] %>"></div>
-	    <div class="row resume-row resume-item-title">
-		<div class="col-lg-12">
-		    <h1 class="align-center resume-item-title"><%= contact['heading'] %></h1>
-		</div>
-	    </div>
-
-	    <div class="row resume-row">
-		<div class="col-lg-12">
-		    <div class="align-center">
-			<a type="button" class="btn btn-primary" href="/linkedin" target="_blank">
-			
-			My Linked<img src="/static/img/in.png" alt="in"/> profile
-			</a>
-		    </div>
-		</div>
-	    </div> 
-	    
-	    <div class="row resume-row">
-		<div class="col-lg-12">
-		    <div class="align-center">
-			<a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
-			<span class="glyphicon glyphicon-envelope"></span>
-			Send me a message
-			</a>
-		    </div>
-		</div>
-	    </div>
-	    <div id="toggle-blob-row" class="row resume-row">
-		<div class="col-lg-12 col-xs-12">
-		    <form class="form-horizontal" role="form">
-			<div class="form-group" id="form-group-blob-from">
-			    <label for="blobFrom" class="col-lg-offset-2 col-lg-2 control-label">Email / Name</label>
-			    <div class="col-lg-4">
-				<input type="text" class="form-control" id="blobFrom" placeholder="User Example, user@example.org, ...">
-			    </div>
-			    <div class="col-lg-3 blob-error" id="blob-from-error"></div>
-			</div>
-			<div class="form-group" id="form-group-blob-content">
-			    <label for="blobContent" class="col-lg-offset-2 col-lg-2 control-label">Message</label>
-			    <div class="col-lg-4">
-				<textarea class="form-control" id="blobContent" rows="5" placeholder="Write something..."></textarea>
-			    </div>
-			    <div class="col-lg-3 blob-error" id="blob-content-error"></div>
-			</div>
-			<div class="form-group">
-			    <div class="col-lg-offset-4 col-lg-2 col-xs-6">
-				<button type="button" class="btn btn-default" id="btn-send-blob">Click here to send it!</button>
-			    </div>
-			    <div class="col-lg-2 col-xs-6 align-left" id="blob-status"></div>
-			</div>
-			<div class="form-group">
-			    <div class="col-lg-offset-4 col-lg-4 col-xs-12">
-				<small style="color: grey"><a href="mailto:alex@jablon.me">Click here</a> to use your regular email client.</small>
-			    </div>
-			</div>
-		    </form>
-		</div>
-	    </div>
-	</script>
-	<script type="text/template" id="blob-template">
-	    <% if ( status === 1) { %>
-		<span class="blob-success align-left">Message sent, thank you!</span>
-	    <% } else if ( status === 2) { %>
-		<span class="blob-error align-left">At least one of the field seemed empty.</span>
-	    <% } else if ( status === 3) { %>
-		<span class="blob-primary align-left">Message not sent: please wait one minute before sending a message again</span>
-	    <% } else if ( status === 42) { %>
-		<span class="blob-primary align-left">Sending...</span>
-	    <% } else { %>
-		<span class="blob-error align-left">An error happened.</span>
+	    <% if (index < list.length || index != 1) { %>
+	      <div class="row resume-row <%= education['name'] %>-hideable hideable">
+	      <div class="col-lg-12 align-center"> &mdash; </div>
+	      </div>
 	    <% } %>
-	</script>
-	<script type="text/javascript" src="/static/libs/js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="/static/libs/js/underscore-min.js"></script>
-	<script type="text/javascript" src="/static/libs/js/backbone-min.js"></script>
-	<script type="text/javascript" src="/static/libs/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/static/js/resume.min.js"></script>
-    </body>
+	  <% }); %>
+	</div>
+      </div>
+
+      <!-- Career Section -->
+      <div id="<%= career['id'] %>" class="pre-title-anchor"></div>
+      <div class="row resume-row resume-item-title"> 
+	<div class="col-lg-12 align-center"><h1 class="align-center"><%= career['heading'] %></h1></div>
+      </div>
+      <% _.each (career['content'], function (item, index, list) { %>
+	<% if (index == 0) { %>
+	  <div class="row resume-row">
+	<% } else { %>
+	  <div class="row resume-row <%= career['id'] %>-hideable hideable">
+	<% } %>
+	    <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
+	    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+	  </div>
+	  <% if (index == 0) { %>
+	<div class="row resume-row">
+	  <div class="col-lg-12 align-center">
+	    <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= career ['id'] %>">
+	      <span class="btn-text-<%= career['id'] %>">See more...</span>
+	      <span class="btn-text-<%= career['id'] %>" style="display:none;">See less...</span>
+	      <span class="glyphicon  btn-icon-<%= career['id'] %> glyphicon-chevron-down"></span>
+	    </span>
+	  </div>
+	</div>
+	<% } %>
+	<% if (index < (list.length - 1) && index != 0) { %>
+	  <div class="row resume-row <%= career['id'] %>-hideable hideable">
+	    <div class="col-lg-12 align-center"> &mdash; </div>
+	  </div>
+	<% } %>
+      <% }); %>
+      <div id="<%= places['id'] %>" class="pre-title-anchor" data-content="<%= places['heading'] %>"></div>
+
+      <!-- Places section -->
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center"><%= places['heading'] %></h1>
+	</div>
+      </div>
+      <div class="row resume-row">
+	<div id="map-small" class="col-xs-12">
+	  <img class="img-responsive" src="/static/img/map_small.jpg" />
+	</div>
+	<div id="map-large" class="col-lg-12">
+	  <% _.each (places['content'], function (place) { %>
+	    <img class="tooltip-origin" src="/static/img/<%= place['type'] %>.png" style="position:absolute;margin-left: <%= place['xcoord'] - 17 %>px;margin-top: <%= place['ycoord'] - 40 %>px " alt="<%= place['name'] %>" href="#" data-toggle="tooltip" title="<%= place['name'] %>"/>
+	  <% }); %>
+	  <img src="/static/img/map_large.jpg" />
+	</div>
+      </div>
+
+      <!-- Projects section -->
+      <div id="<%= projects['id'] %>" class="pre-title-anchor" data-content="<%= projects['heading'] %>"></div>
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center"><%= projects['heading'] %></h1>
+	</div>
+      </div>
+      <div class="row resume-row">
+	<div class="col-lg-12">
+	  <% _.each (projects['content'], function (project) { %>
+	    <div class="col-lg-2"><div class="resume-padding-18"><%= project['key'] %></div></div>
+	    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project['content'] %></div></div>
+	  <% }); %>
+	</div>
+      </div>
+
+      <!-- Interests section -->
+      <div id="<%= interests['id'] %>" class="pre-title-anchor" data-content="<%= interests['heading'] %>"></div>
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center"><%= interests['heading'] %></h1>
+	</div>
+	</div>
+	<div class="row resume-row">
+	  <div class="col-lg-12">
+	  <%= interests['content'] %>
+	</div>
+      </div>
+
+      <!-- Now section -->
+      <div id="<%= now['id'] %>" class="pre-title-anchor" data-content="<%= now['heading'] %>"></div>
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center"><%= now['heading'] %></h1>
+	</div>
+      </div>
+      <div class="row resume-row">
+	<div class="col-lg-3 col-xs-3">
+	  <img src="/static/img/<%= now['image'] %>" alt="<%= now['name'] %>" class="img-thumbnail"/>
+	</div>
+	<div class="col-lg-9 col-xs-9">
+	  <p><%= now['content'] %></p>
+	</div>
+      </div>
+
+      <!-- Currents section -->
+      <div id="<%= currents['id'] %>" class="pre-title-anchor" data-content="<%= currents['heading'] %>"></div>
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center"><%= currents['heading'] %></h1>
+	</div>
+      </div>
+      <% _.each (currents['content'], function (current, index, list) { %>
+	<% if (index % 4 === 0) { %>
+	  <div class="row resume-row">
+	<% } %>
+	<div class="col-lg-3 col-xs-3 align-center">
+	  <img class="img-thumbnail tooltip-origin" src="/static/img/<%= current['icon'] %>.png" alt="<%= current['name'] %>" data-toggle="tooltip" title="<%= current['name'] %>" data-placement="bottom"/>
+	</div>
+	<% if (index % 4 === 3 || index == (list.length -1)) { %>
+	  </div>
+	<% } %>
+	<% index++; %>
+      <% }); %>
+
+      <!-- About this site section -->
+      <div class="pre-title-anchor"></div>
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center"><%= this_site['heading'] %></h1>
+	</div>
+      </div>
+      <div class="row resume-row">
+	<div class="col-lg-12">
+	  <%= this_site['content'] %>
+	</div>
+      </div>
+
+      <!-- Contact section -->
+      <div id="<%= contact['id'] %>" class="pre-title-anchor" data-content="<%= contact['heading'] %>"></div>
+      <div class="row resume-row resume-item-title">
+	<div class="col-lg-12">
+	  <h1 class="align-center resume-item-title"><%= contact['heading'] %></h1>
+	</div>
+      </div>
+
+      <div class="row resume-row">
+	<div class="col-lg-12">
+	  <div class="align-center">
+	    <a type="button" class="btn btn-primary" href="/linkedin" target="_blank">
+	      My Linked<img src="/static/img/in.png" alt="in"/> profile
+	    </a>
+	  </div>
+	</div>
+      </div> 
+
+      <div class="row resume-row">
+	<div class="col-lg-12">
+	  <div class="align-center">
+	    <a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
+	      <span class="glyphicon glyphicon-envelope"></span>
+	      Send me a message
+	    </a>
+	  </div>
+	</div>
+      </div>
+      <div id="toggle-blob-row" class="row resume-row">
+	<div class="col-lg-12 col-xs-12">
+	  <form class="form-horizontal" role="form">
+	    <div class="form-group" id="form-group-blob-from">
+	      <label for="blobFrom" class="col-lg-offset-2 col-lg-2 control-label">Email / Name</label>
+	      <div class="col-lg-4">
+		<input type="text" class="form-control" id="blobFrom" placeholder="User Example, user@example.org, ...">
+	      </div>
+	      <div class="col-lg-3 blob-error" id="blob-from-error"></div>
+	    </div>
+	    <div class="form-group" id="form-group-blob-content">
+	      <label for="blobContent" class="col-lg-offset-2 col-lg-2 control-label">Message</label>
+	      <div class="col-lg-4">
+		<textarea class="form-control" id="blobContent" rows="5" placeholder="Write something..."></textarea>
+	      </div>
+	      <div class="col-lg-3 blob-error" id="blob-content-error"></div>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-lg-offset-4 col-lg-2 col-xs-6">
+		<button type="button" class="btn btn-default" id="btn-send-blob">Click here to send it!</button>
+	      </div>
+	      <div class="col-lg-2 col-xs-6 align-left" id="blob-status"></div>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-lg-offset-4 col-lg-4 col-xs-12">
+		<small style="color: grey"><a href="mailto:alex@jablon.me">Click here</a> to use your regular email client.</small>
+	      </div>
+	    </div>
+	  </form>
+	</div>
+      </div>
+      </script>
+      <script type="text/template" id="blob-template">
+	<% if ( status === 1) { %>
+	  <span class="blob-success align-left">Message sent, thank you!</span>
+	<% } else if ( status === 2) { %>
+	  <span class="blob-error align-left">At least one of the field seemed empty.</span>
+	<% } else if ( status === 3) { %>
+	  <span class="blob-primary align-left">Message not sent: please wait one minute before sending a message again</span>
+	<% } else if ( status === 42) { %>
+	  <span class="blob-primary align-left">Sending...</span>
+	<% } else { %>
+	  <span class="blob-error align-left">An error happened.</span>
+	<% } %>
+    </script>
+    <script type="text/javascript" src="/static/libs/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/static/libs/js/underscore-min.js"></script>
+    <script type="text/javascript" src="/static/libs/js/backbone-min.js"></script>
+    <script type="text/javascript" src="/static/libs/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/resume.min.js"></script>
+  </body>
 </html>
 

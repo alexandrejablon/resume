@@ -134,7 +134,7 @@ exports.resume = {
 	icon: 'js_stuff',
       },
       {
-	name: 'Twitter&#39;s Bootstrap',
+	name: 'Bootstrap',
 	icon: 'bootstrap',
       },
       {
