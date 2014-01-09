@@ -28,8 +28,8 @@ exports.resume = {
     id: 'career',
     content: [
       {
-	key: '<b>From June 2013</b>',
-	content: '<p><b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>:</p><p><ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our database,</li><li> &ndash; Development and Implementation of specific options, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, Twisted, Redis, MongoDB.</p>'
+	key: '<b>From June 2013 to December 2013</b>',
+	content: '<p><b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>Work4 Labs makes a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our database,</li><li> &ndash; Development and Implementation of specific options, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).</p>'
       },
       {
 	key: '<b>July &ndash; August 2012</b>',
@@ -58,9 +58,9 @@ exports.resume = {
   now: {
     heading: 'What I&#39;m currently doing',
     id: 'now',
-    name: 'Work4',
-    image: 'work4.png',
-    content: '<ul class="no-bullet-list"><li> &ndash; I&#8217;m currently doing an internship at <b>Work4, the #1 Facebook Recruiting Solution</b>, in Paris, France.</li><li> &ndash; We make a great Facebook application to enable our customers to recruit talented people in a smarter way and we&#8217;re pioneering the world of Social Recruiting!</li></ul>'
+    name: 'INSA Lyon',
+    image: 'insa.png',
+    content: 'I&#8217;m currently studying at INSA de Lyon in France, preparing a MSc in Telecommunications. I&#8217;m in my last term.'
   },
   interests: {
     heading: 'Topics of interests',
