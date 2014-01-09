@@ -29,7 +29,7 @@ exports.resume = {
     content: [
       {
 	key: '<b>From June 2013 to December 2013</b>',
-	content: '<p><b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>Work4 Labs makes a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our database,</li><li> &ndash; Development and Implementation of specific options, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).</p>'
+	content: '<p><b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>The folks at Work4 Labs make a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our database,</li><li> &ndash; Development and Implementation of specific options, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).</p>'
       },
       {
 	key: '<b>July &ndash; August 2012</b>',
