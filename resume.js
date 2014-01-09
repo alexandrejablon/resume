@@ -45,8 +45,8 @@ exports.blob = function (req, res) {
 	  });
 
 	  var mailOptions = {
-	    from: "Resume Alexandre Jablon <resume@jablon.me>",
-	    to: "alexandre.jablon+resume@gmail.com",
+	    from: "My Resume <alexandre.jablon.resume@gmail.com>",
+	    to: "alex+resume@jablon.me",
 	    subject: "Someone has sent you something from your resume",
 	    html: "<b>From:</b> " + req.body.blobFrom + "<br/><br/><b>Content:</b> <br/>" + req.body.blobContent
 	  }
