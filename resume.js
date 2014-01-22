@@ -76,5 +76,5 @@ exports.fourofour = function (req, res) {
 };
 
 exports.linkedin = function (req, res) {
-  res.redirect( 'http://www.linkedin.com/pub/alexandre-jablon/3b/b25/3a9/' );
+  res.redirect( 'http://www.linkedin.com/in/alexjablon' );
 }
