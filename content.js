@@ -6,7 +6,7 @@ exports.resume = {
     content: [
       {
 	key: '<b>Since 2011</b>',
-	content: '<p><b>Department of Telecommunications, Services and Applications</b> at <b>INSA de Lyon</b> (National Insitute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at <b>Tampere University of Technology</b> in Tampere, Finland.</p>'
+	content: '<p><b>MSc. (class of 2014)</b> at the Department of <b>Telecommunications, Services and Applications</b> at <b>INSA de Lyon</b> (National Institute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at <b>Tampere University of Technology</b> in Tampere, Finland.</p>'
       },
       {
 	key: '<b>From 2009 to 2011</b>',
@@ -60,7 +60,7 @@ exports.resume = {
     id: 'now',
     name: 'INSA Lyon',
     image: 'insa.png',
-    content: 'I&#8217;m currently studying at INSA de Lyon in France, preparing a MSc in Telecommunications. I&#8217;m in my last term.'
+    content: 'I&#8217;m currently studying at INSA de Lyon in France, preparing a MSc. in Telecommunications. I&#8217;m in my last term.'
   },
   interests: {
     heading: 'Topics of interests',
