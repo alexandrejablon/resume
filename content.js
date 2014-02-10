@@ -18,7 +18,7 @@ exports.resume = {
       },
       {
 	key: '<b>Computer Science</b>',
-	content: '<p><b>Keywords and Languages: GNU/Linux, Agility, Python, Web, REST, Node.js, Backbone.js, MongoDB, RethinkDB, Git. </b></p>'
+	content: '<p><b>Keywords and Languages: GNU/Linux, Agility, Python, REST, Node.js, Backbone.js, MongoDB, RethinkDB, Git. </b></p>'
 
       }
     ]
