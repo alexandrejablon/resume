@@ -66,6 +66,12 @@
   color: #D9534F;
 }
 
+.my-resume-title-text {
+  text-shadow: 1px 1px 0 #444444;
+  font-weight: bold;
+}
+
+
 @media screen and (min-width: 1200px) {
   body {
     font-family: 'Open Sans', sans-serif;
@@ -89,9 +95,7 @@
     position:fixed;
     z-index: 0;
     color: white;
-    text-shadow: 1px 1px 0 #444444;
     top: 75px;
-    font-weight: bold;
   }
 
   .my-resume-title-left {
@@ -143,10 +147,8 @@
     width:100%;
     font-size: 72px;
     color: #555;
-    text-shadow: 1px 1px 0 #AAA;
     padding-top:50px;
     height:300px;
-    font-weight: bold;
   }
 
   .my-resume-title-left {
@@ -208,4 +210,5 @@
 
 .device-label {
   font-size: small;
+  cursor: default;
 }

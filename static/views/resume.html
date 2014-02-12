@@ -19,10 +19,13 @@
 	  <div class="col-lg-6 my-resume-title-left">
 	    <ul class="no-bullet-list">
 	      <li><img src="/static/img/me.png" width="100" alt="me" /></li>
-	      <li>Alex Jablon <span class="label label-primary device-label" id="mobile-label">Mobile</span><span class="label label-primary device-label" id="desktop-label">Desktop</span></li>
+	      <li><span class="my-resume-title-text">Alex Jablon</span>
+		<span class="label label-primary label-sm device-label tooltip-element" id="mobile-label" data-toggle="tooltip" data-placement="right" title="The layout of my resume has been adapted to your screen size">Mobile</span>
+		<span class="label label-primary label-sm device-label tooltip-element" id="desktop-label" data-toggle="tooltip" data-placement="bottom" title="The layout of my resume has been adapted to your screen size">Desktop</span>
+	      </li>
 	    </ul>
 	  </div>
-	  <div class="col-lg-6 my-resume-title-right">
+	  <div class="col-lg-6 my-resume-title-right my-resume-title-text">
 	    <ul class="no-bullet-list">
 	      <li><img src="/static/img/glyphicons_globe.png" /> alex.jablon.me</li>
 	      <li><img src="/static/img/glyphicons_envelope.png" /> alex@jablon.me</li>
@@ -270,6 +273,9 @@
     <script type="text/javascript" src="/static/libs/js/backbone-min.js"></script>
     <script type="text/javascript" src="/static/libs/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/resume.min.js"></script>
+    <script type="text/javascript">
+      $ ('.tooltip-element').tooltip ();
+    </script>
   </body>
 </html>
 
