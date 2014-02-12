@@ -21,7 +21,7 @@ exports.render = function (req, res) {
 };
 
 exports.get_resume = function (req, res) {
-  res.json ( content.resume );
+  res.json (content.resume);
 };
 
 exports.blob = function (req, res) {
@@ -29,13 +29,13 @@ exports.blob = function (req, res) {
   var mdsum = crypto.createHash('md5');
   var ipHash = mdsum.digest('ascii');
   client.set(ipHash, req.ip, 'EX', 60, 'NX', function (redisErr, redisRes) {
-    if ( redisErr ) {
-      res.send ( { 'status': 0 } );
+    if (redisErr) {
+      res.send ({ 'status': 0 });
     } else {
-      if ( redisRes === null ) {
-	res.send ( { 'status': 3 } );
+      if (redisRes === null) {
+	res.send ({ 'status': 3 });
       } else {
-	if ( req.body.blobFrom && req.body.blobContent ) {
+	if (req.body.blobFrom && req.body.blobContent) {
 	  var smtpTransport = nodemailer.createTransport ("SMTP", {
 	    service: "Gmail",
 	    auth: {
@@ -52,14 +52,14 @@ exports.blob = function (req, res) {
 	  }
 
 	  smtpTransport.sendMail (mailOptions, function (error, response) {
-	    if ( error ) {
-	      res.send ( { 'status': 0 } );
+	    if (error) {
+	      res.send ({ 'status': 0 });
 	    } else {
-	      res.send ( { 'status': 1 } );
+	      res.send ({ 'status': 1 });
 	    }
 	  });
 	} else {
-	  res.send ( {'status': 2} );
+	  res.send ({'status': 2});
 	}
       }
     }
@@ -67,14 +67,18 @@ exports.blob = function (req, res) {
 };
 
 exports.robots = function (req, res) {
-  res.set( 'Content-Type', 'text/plain' );
-  res.send( 200, 'User-agent: Googlebot\nAllow: /\nUser-agent: *\nDisallow: /' );
+  res.set ('Content-Type', 'text/plain');
+  res.send (200, 'User-agent: Googlebot\nAllow: /\nUser-agent: *\nDisallow: /');
 };
 
 exports.fourofour = function (req, res) {
-  res.status ( 404 ).sendfile( __dirname + '/static/views/404.html' );
+  res.status (404).sendfile(__dirname + '/static/views/404.html');
 };
 
 exports.linkedin = function (req, res) {
-  res.redirect( 'http://www.linkedin.com/in/alexjablon' );
+  res.redirect ('http://www.linkedin.com/in/alexjablon');
+}
+
+exports.github = function (req, res) {
+  res.redirect ('http://github.com/alexandrejablon');
 }
