@@ -121,6 +121,14 @@
     background-color: white;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
   }
+
+  #mobile-label {
+    display: none;
+  }
+
+  #desktop-label {
+    display: inline;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -143,12 +151,12 @@
 
   .my-resume-title-left {
     font-size: x-large;
-    text-align: center;
+    text-align: left;
   }
 
   .my-resume-title-right {
     font-size: large;
-    text-align: center;
+    text-align: left;
   }
 
   .blurry-back {
@@ -165,6 +173,14 @@
 
   #main404 {
     color: #444444;
+  }
+
+  #mobile-label {
+    display: inline;
+  }
+
+  #desktop-label {
+    display: none;
   }
 }
 
@@ -188,4 +204,8 @@
 
 .btn-default {
   box-shadow: 0 4px lightgrey;
+}
+
+.device-label {
+  font-size: small;
 }

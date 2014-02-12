@@ -22,14 +22,11 @@ app.use (function (err, req, res, next) {
 });
 
 app.get ('/', resume.render);
-
 app.get ('/get_resume', resume.get_resume);
-
 app.post ('/blob', resume.blob);
-
 app.get ('/robots.txt', resume.robots);
-
 app.get ('/linkedin', resume.linkedin);
+app.get ('/github', resume.github);
 
 app.get ('*', resume.fourofour);
 
