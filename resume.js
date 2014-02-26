@@ -40,7 +40,7 @@ exports.blob = function (req, res) {
 	    service: "Gmail",
 	    auth: {
 	      user: "alexandre.jablon.resume@gmail.com",
-	      pass: _pass ()
+	      pass: _pass
 	    }
 	  });
 
