@@ -7,6 +7,9 @@ stop:
 list:
 	forever list;
 
+test:
+	mocha --ui bdd -R spec
+
 restart: stop start
 
-.PHONY: start stop list restart
+.PHONY: start stop list restart test
