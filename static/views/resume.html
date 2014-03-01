@@ -15,258 +15,255 @@
 
     <div class="my-resume-title">
       <div class="container">
-	<div class="row">
-	  <div class="col-lg-6 my-resume-title-left">
-	    <ul class="no-bullet-list">
-	      <li><img src="/static/img/me.png" width="100" alt="me" /></li>
-	      <li><span class="my-resume-title-text">Alex Jablon</span>
-		<span class="label label-primary label-sm device-label tooltip-element" id="mobile-label" data-toggle="tooltip" data-placement="right" title="The layout of my resume has been adapted to your screen size">Mobile</span>
-		<span class="label label-primary label-sm device-label tooltip-element" id="desktop-label" data-toggle="tooltip" data-placement="bottom" title="The layout of my resume has been adapted to your screen size">Desktop</span>
-	      </li>
-	    </ul>
-	  </div>
-	  <div class="col-lg-6 my-resume-title-right my-resume-title-text">
-	    <ul class="no-bullet-list">
-	      <li><img src="/static/img/glyphicons_globe.png" /> alex.jablon.me</li>
-	      <li><img src="/static/img/glyphicons_envelope.png" /> alex@jablon.me</li>
-	      <li><img src="/static/img/glyphicons_linked_in.png" /> <a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
-	      <li><img src="/static/img/glyphicons_github.png" /> <a href="//alex.jablon.me/github">alex.jablon.me/github</a></li>
-	    </ul>
-	  </div>
-	</div>
+        <div class="row">
+          <div class="col-lg-6 my-resume-title-left">
+            <ul class="no-bullet-list">
+              <li><img src="/static/img/me.png" width="100" alt="me" /></li>
+              <li><span class="my-resume-title-text">Alex Jablon</span>
+                <span class="label label-primary label-sm device-label tooltip-element" id="mobile-label" data-toggle="tooltip" data-placement="right" title="The layout of my resume has been adapted to your screen size">Mobile</span>
+                <span class="label label-primary label-sm device-label tooltip-element" id="desktop-label" data-toggle="tooltip" data-placement="bottom" title="The layout of my resume has been adapted to your screen size">Desktop</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 my-resume-title-right my-resume-title-text">
+            <ul class="no-bullet-list">
+              <li><img src="/static/img/glyphicons_globe.png" /> alex.jablon.me</li>
+              <li><img src="/static/img/glyphicons_envelope.png" /> alex@jablon.me</li>
+              <li><img src="/static/img/glyphicons_linked_in.png" /> <a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
+              <li><img src="/static/img/glyphicons_github.png" /> <a href="//alex.jablon.me/github">alex.jablon.me/github</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="blurry-back" style="height: 308px"></div>
     <div id="resume-wide">
       <div id="resume" class="container">
-	<div class="resume-item-title" style="text-align:center">
-	  <h1>Loading...</h1>
-	</div>
+        <div class="resume-item-title" style="text-align:center">
+          <h1>Loading...</h1>
+        </div>
       </div>
       <hr/>
       <div class="contact-footer">
-	<ul class="no-bullet-list">
-	  <li>&copy; Alexandre Jablon 2013</li>
-	  <li><img src="/static/img/glyphicons_globe.png" width="18" /> alex.jablon.me</li>
-	  <li><img src="/static/img/glyphicons_envelope.png" width="18" /> alex@jablon.me</li>
-	  <li><img src="/static/img/glyphicons_linked_in.png" width="18" /> <a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
-	  <li><img src="/static/img/glyphicons_github.png" width="18" /> <a href="//alex.jablon.me/github">alex.jablon.me/github</a></li>
-	</ul>
+        <ul class="no-bullet-list">
+          <li>&copy; Alexandre Jablon 2013</li>
+          <li><img src="/static/img/glyphicons_globe.png" width="18" /> alex.jablon.me</li>
+          <li><img src="/static/img/glyphicons_envelope.png" width="18" /> alex@jablon.me</li>
+          <li><img src="/static/img/glyphicons_linked_in.png" width="18" /> <a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
+          <li><img src="/static/img/glyphicons_github.png" width="18" /> <a href="//alex.jablon.me/github">alex.jablon.me/github</a></li>
+        </ul>
       </div>
     </div>
 
     <script type="text/template" id="resume-template">
       <!-- Education Section -->
       <div class="row resume-row resume-item-title" style="margin-top:50px;">
-	<div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center"><%= education['heading'] %></h1></div>
+        <div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center"><%= education['heading'] %></h1></div>
       </div>
       <div class="row resume-row" style="margin:0">
-	<div class="col-lg-12">
-	  <% _.each (education['content'], function (item, index, list) { %>
-	    <div class="row resume-row">
-	      <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-	      <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
-	    </div>
-	    <% if (index < list.length || index != 1) { %>
-	      <div class="row resume-row <%= education['name'] %>-hideable hideable">
-	      <div class="col-lg-12 align-center"> &mdash; </div>
-	      </div>
-	    <% } %>
-	  <% }); %>
-	</div>
+        <div class="col-lg-12">
+          <% _.each (education['content'], function (item, index, list) { %>
+            <div class="row resume-row">
+              <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
+              <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+            </div>
+            <% if (index < list.length || index != 1) { %>
+              <div class="row resume-row <%= education['name'] %>-hideable hideable">
+              <div class="col-lg-12 align-center"> &mdash; </div>
+              </div>
+            <% } %>
+          <% }); %>
+        </div>
       </div>
 
       <!-- Career Section -->
       <div class="row resume-row resume-item-title"> 
-	<div class="col-lg-12 align-center"><h1 class="align-center"><%= career['heading'] %></h1></div>
+        <div class="col-lg-12 align-center"><h1 class="align-center"><%= career['heading'] %></h1></div>
       </div>
       <% _.each (career['content'], function (item, index, list) { %>
-	<% if (index == 0) { %>
-	  <div class="row resume-row">
-	<% } else { %>
-	  <div class="row resume-row <%= career['id'] %>-hideable hideable">
-	<% } %>
-	    <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-	    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
-	  </div>
-	  <% if (index == 0) { %>
-	<div class="row resume-row">
-	  <div class="col-lg-12 align-center">
-	    <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= career ['id'] %>">
-	      <span class="btn-text-<%= career['id'] %>">See more...</span>
-	      <span class="btn-text-<%= career['id'] %>" style="display:none;">See less...</span>
-	      <span class="glyphicon  btn-icon-<%= career['id'] %> glyphicon-chevron-down"></span>
-	    </span>
-	  </div>
-	</div>
-	<% } %>
-	<% if (index < (list.length - 1) && index != 0) { %>
-	  <div class="row resume-row <%= career['id'] %>-hideable hideable">
-	    <div class="col-lg-12 align-center"> &mdash; </div>
-	  </div>
-	<% } %>
+        <% if (index == 0) { %>
+          <div class="row resume-row">
+        <% } else { %>
+          <div class="row resume-row <%= career['id'] %>-hideable hideable">
+        <% } %>
+            <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
+            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+          </div>
+        <% if (index == 0) { %>
+          <div class="row resume-row">
+            <div class="col-lg-12 align-center">
+              <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= career ['id'] %>">
+                <span class="btn-text-<%= career['id'] %>">See more...</span>
+                <span class="btn-text-<%= career['id'] %>" style="display:none;">See less...</span>
+                <span class="glyphicon  btn-icon-<%= career['id'] %> glyphicon-chevron-down"></span>
+              </span>
+            </div>
+          </div>
+        <% } %>
+        <% if (index < (list.length - 1) && index != 0) { %>
+          <div class="row resume-row <%= career['id'] %>-hideable hideable">
+            <div class="col-lg-12 align-center"> &mdash; </div>
+          </div>
+        <% } %>
       <% }); %>
 
       <!-- Places section -->
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center"><%= places['heading'] %></h1>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center"><%= places['heading'] %></h1>
+        </div>
       </div>
       <div class="row resume-row">
-	<div id="map-small" class="col-xs-12">
-	  <img class="img-responsive" src="/static/img/map_small.jpg" />
-	</div>
-	<div id="map-large" class="col-lg-12">
-	  <% _.each (places['content'], function (place) { %>
-	    <img class="tooltip-origin" src="/static/img/<%= place['type'] %>.png" style="position:absolute;margin-left: <%= place['xcoord'] - 17 %>px;margin-top: <%= place['ycoord'] - 40 %>px " alt="<%= place['name'] %>" href="#" data-toggle="tooltip" title="<%= place['name'] %>"/>
-	  <% }); %>
-	  <img src="/static/img/map_large.jpg" />
-	</div>
+      <div id="map-small" class="col-xs-12">
+        <img class="img-responsive" src="/static/img/map_small.jpg" />
+      </div>
+        <div id="map-large" class="col-lg-12">
+          <% _.each (places['content'], function (place) { %>
+            <img class="tooltip-origin" src="/static/img/<%= place['type'] %>.png" style="position:absolute;margin-left: <%= place['xcoord'] - 17 %>px;margin-top: <%= place['ycoord'] - 40 %>px " alt="<%= place['name'] %>" href="#" data-toggle="tooltip" title="<%= place['name'] %>"/>
+          <% }); %>
+          <img src="/static/img/map_large.jpg" />
+        </div>
       </div>
 
       <!-- Projects section -->
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center"><%= projects['heading'] %></h1>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center"><%= projects['heading'] %></h1>
+        </div>
       </div>
       <div class="row resume-row">
-	<div class="col-lg-12">
-	  <% _.each (projects['content'], function (project) { %>
-	    <div class="col-lg-2"><div class="resume-padding-18"><%= project['key'] %></div></div>
-	    <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project['content'] %></div></div>
-	  <% }); %>
-	</div>
+        <div class="col-lg-12">
+          <% _.each (projects['content'], function (project) { %>
+            <div class="col-lg-2"><div class="resume-padding-18"><%= project['key'] %></div></div>
+            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project['content'] %></div></div>
+          <% }); %>
+        </div>
       </div>
 
       <!-- Interests section -->
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center"><%= interests['heading'] %></h1>
-	</div>
-	</div>
-	<div class="row resume-row">
-	  <div class="col-lg-12">
-	  <%= interests['content'] %>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center"><%= interests['heading'] %></h1>
+        </div>
+      </div>
+      <div class="row resume-row">
+        <div class="col-lg-12">
+          <%= interests['content'] %>
+        </div>
       </div>
 
       <!-- Now section -->
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center"><%= now['heading'] %></h1>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center"><%= now['heading'] %></h1>
+        </div>
       </div>
       <div class="row resume-row">
-	<div class="col-lg-3 col-xs-3">
-	  <img src="/static/img/<%= now['image'] %>" alt="<%= now['name'] %>" class="img-thumbnail"/>
-	</div>
-	<div class="col-lg-9 col-xs-9">
-	  <p><%= now['content'] %></p>
-	</div>
+        <div class="col-lg-3 col-xs-3">
+          <img src="/static/img/<%= now['image'] %>" alt="<%= now['name'] %>" class="img-thumbnail"/>
+        </div>
+        <div class="col-lg-9 col-xs-9">
+          <p><%= now['content'] %></p>
+        </div>
       </div>
 
       <!-- Currents section -->
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center"><%= currents['heading'] %></h1>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center"><%= currents['heading'] %></h1>
+        </div>
       </div>
       <% _.each (currents['content'], function (current, index, list) { %>
-	<% if (index % 4 === 0) { %>
-	  <div class="row resume-row">
-	<% } %>
-	<div class="col-lg-3 col-xs-3 align-center">
-	  <img class="img-thumbnail tooltip-origin" src="/static/img/<%= current['icon'] %>.png" alt="<%= current['name'] %>" data-toggle="tooltip" title="<%= current['name'] %>" data-placement="bottom"/>
-	</div>
-	<% if (index % 4 === 3 || index == (list.length -1)) { %>
-	  </div>
-	<% } %>
-	<% index++; %>
+        <% if (index % 4 === 0) { %>
+          <div class="row resume-row">
+        <% } %>
+        <div class="col-lg-3 col-xs-3 align-center">
+          <img class="img-thumbnail tooltip-origin" src="/static/img/<%= current['icon'] %>.png" alt="<%= current['name'] %>" data-toggle="tooltip" title="<%= current['name'] %>" data-placement="bottom"/>
+        </div>
+        <% if (index % 4 === 3 || index == (list.length -1)) { %>
+          </div>
+        <% } %>
       <% }); %>
 
       <!-- About this site section -->
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center"><%= this_site['heading'] %></h1>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center"><%= this_site['heading'] %></h1>
+        </div>
       </div>
       <div class="row resume-row">
-	<div class="col-lg-12"><%= this_site['content'] %></div>
+        <div class="col-lg-12"><%= this_site['content'] %></div>
       </div>
 
       <div class="row resume-row resume-item-title">
-	<div class="col-lg-12">
-	  <h1 class="align-center resume-item-title"><%= contact['heading'] %></h1>
-	</div>
+        <div class="col-lg-12">
+          <h1 class="align-center resume-item-title"><%= contact['heading'] %></h1>
+        </div>
       </div>
 
       <div class="row resume-row">
-	<div class="col-lg-12">
-	  <div class="align-center">
-	    <a type="button" class="btn btn-primary" href="/linkedin" target="_blank">
-	      My Linked<img src="/static/img/in.png" alt="in"/> profile
-	    </a>
-	  </div>
-	</div>
+        <div class="col-lg-12">
+          <div class="align-center">
+            <a type="button" class="btn btn-primary" href="/linkedin" target="_blank">
+              My Linked<img src="/static/img/in.png" alt="in"/> profile
+            </a>
+          </div>
+        </div>
       </div> 
 
       <div class="row resume-row">
-	<div class="col-lg-12">
-	  <div class="align-center">
-	    <a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
-	      <span class="glyphicon glyphicon-envelope"></span>
-	      Send me a message
-	    </a>
-	  </div>
-	</div>
+        <div class="col-lg-12">
+          <div class="align-center">
+            <a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
+              <span class="glyphicon glyphicon-envelope"></span>
+              Send me a message
+            </a>
+          </div>
+        </div>
       </div>
       <div id="toggle-blob-row" class="row resume-row">
-	<div class="col-lg-12 col-xs-12">
-	  <form class="form-horizontal" role="form">
-	    <div class="form-group" id="form-group-blob-from">
-	      <label for="blobFrom" class="col-lg-offset-2 col-lg-2 control-label">Email / Name</label>
-	      <div class="col-lg-4">
-		<input type="text" class="form-control" id="blobFrom" placeholder="User Example, user@example.org, ...">
-	      </div>
-	      <div class="col-lg-3 blob-error" id="blob-from-error"></div>
-	    </div>
-	    <div class="form-group" id="form-group-blob-content">
-	      <label for="blobContent" class="col-lg-offset-2 col-lg-2 control-label">Message</label>
-	      <div class="col-lg-4">
-		<textarea class="form-control" id="blobContent" rows="5" placeholder="Write something..."></textarea>
-	      </div>
-	      <div class="col-lg-3 blob-error" id="blob-content-error"></div>
-	    </div>
-	    <div class="form-group">
-	      <div class="col-lg-offset-4 col-lg-2 col-xs-6">
-		<button type="button" class="btn btn-default" id="btn-send-blob">Click here to send it!</button>
-	      </div>
-	      <div class="col-lg-2 col-xs-6 align-left" id="blob-status"></div>
-	    </div>
-	    <div class="form-group">
-	      <div class="col-lg-offset-4 col-lg-4 col-xs-12">
-		<small style="color: grey"><a href="mailto:alex@jablon.me">Click here</a> to use your regular email client.</small>
-	      </div>
-	    </div>
-	  </form>
-	</div>
+        <div class="col-lg-offset-3 col-lg-6 col-xs-12">
+          <form role="form">
+            <div class="form-group has-feedback" id="form-group-blob-from">
+              <label for="blobFrom">Email / Name : </label>
+              <input type="text" class="form-control" id="blobFrom" placeholder="user@example.org, ...">
+              <span id="blob-from-feedback" class="form-control-feedback"></span>
+              <div class="blob-error" id="blob-from-error"></div>
+            </div>
+            <div class="form-group has-feedback" id="form-group-blob-content">
+              <label for="blobContent">Message : </label>
+              <textarea class="form-control" id="blobContent" rows="5" placeholder="Write something..."></textarea>
+              <span id="blob-content-feedback" class="form-control-feedback"></span>
+              <div class="blob-error" id="blob-content-error"></div>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-lg-4 col-xs-6">
+                  <button type="button" class="btn btn-success" id="btn-send-blob">Click here to send it!</button>
+                </div>
+                <div class="col-lg-8 col-xs-6 align-left" id="blob-status"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <small style="color: grey"><a href="mailto:alex@jablon.me">Click here</a> to use your regular email client.</small>
+            </div>
+          </form>
+        </div>
       </div>
-      </script>
-      <script type="text/template" id="blob-template">
-	<% if ( status === 1) { %>
-	  <span class="blob-success align-left">Message sent, thank you!</span>
-	<% } else if ( status === 2) { %>
-	  <span class="blob-error align-left">At least one of the field seemed empty.</span>
-	<% } else if ( status === 3) { %>
-	  <span class="blob-primary align-left">Message not sent: please wait one minute before sending a message again</span>
-	<% } else if ( status === 42) { %>
-	  <span class="blob-primary align-left">Sending...</span>
-	<% } else { %>
-	  <span class="blob-error align-left">An error happened.</span>
-	<% } %>
+    </script>
+    <script type="text/template" id="blob-template">
+      <% if ( status === 1) { %>
+        <span class="blob-success align-left">Message sent, thank you!</span>
+      <% } else if ( status === 2) { %>
+        <span class="blob-error align-left">At least one of the field seemed empty.</span>
+      <% } else if ( status === 3) { %>
+        <span class="blob-primary align-left">Message not sent: please wait one minute before sending a message again</span>
+      <% } else if ( status === 42) { %>
+        <span class="blob-primary align-left">Sending...</span>
+      <% } else { %>
+        <span class="blob-error align-left">An error happened.</span>
+      <% } %>
     </script>
     <script type="text/javascript" src="/static/libs/js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/static/libs/js/underscore-min.js"></script>
