@@ -1,4 +1,6 @@
 node_modules
 _pass.js
-static
+static/img
+static/js/resume.min.js
+static/libs
 *.swp
