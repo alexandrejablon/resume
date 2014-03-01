@@ -40,17 +40,21 @@ ResumeView = Backbone.View.extend({
 	    error = true;
 	    this.$('#blob-from-error').html ('This field must not be empty!');
 	    this.$('#form-group-blob-from').addClass ('has-error');
+	    this.$('#blob-content-feedback').addClass ('glyphicon glyphicon-remove');
 	} else {
 	    this.$('#blob-from-error').html ('');
 	    this.$('#form-group-blob-from').removeClass ('has-error');
+	    this.$('#blob-content-feedback').removeClass ('glyphicon glyphicon-remove');
 	}
 	if (blobContent === "") {
 	    error = true;
 	    this.$('#blob-content-error').html ('This field must not be empty!');
 	    this.$('#form-group-blob-content').addClass ('has-error');
+	    this.$('#blob-content-feedback').addClass ('glyphicon glyphicon-remove');
 	} else {
 	    this.$('#blob-content-error').html ('');
 	    this.$('#form-group-blob-content').removeClass ('has-error');
+	    this.$('#blob-content-feedback').removeClass ('glyphicon glyphicon-remove');
 	}
 
 	if (!error) {

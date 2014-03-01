@@ -13,6 +13,9 @@ test:
 	mocha --ui bdd -R spec
 
 install:
-	npm install; npm install mocha forever -g;
+	npm install; npm install mocha forever gulp -g;
 
-.PHONY: start stop list restart test
+build:
+	gulp build
+
+.PHONY: start stop restart list test install build
