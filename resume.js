@@ -67,7 +67,7 @@ var send_email = exports.send_email = function (data, callback) {
     to: "alex+resume@jablon.me",
     subject: "Someone has sent you something from your resume",
     html: "<b>From:</b> " + data.from + "<br/><br/><b>Content:</b> <br/>" + data.content
-  }
+  };
   smtpTransport.sendMail (mailOptions, callback);
 };
 
@@ -82,8 +82,8 @@ var fourofour = exports.fourofour = function (req, res) {
 
 var linkedin = exports.linkedin = function (req, res) {
   res.redirect ('http://www.linkedin.com/in/alexjablon');
-}
+};
 
 var github = exports.github = function (req, res) {
   res.redirect ('http://github.com/alexjab');
-}
+};
