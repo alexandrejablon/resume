@@ -121,7 +121,7 @@ module.exports = {
     ]
   },
   currents: {
-    heading: 'What I&#39;m working with', 
+    heading: 'My skills',
     id: 'currents',
     content: [
       {
