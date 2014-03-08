@@ -18,4 +18,7 @@ install:
 build:
 	gulp build
 
-.PHONY: start stop restart list test install build
+init:
+	cp conf.js.tpl conf.js
+
+.PHONY: start stop restart list test install build init

@@ -4,6 +4,7 @@ var _ = require ('underscore');
 
 var resume = require ('./resume.js');
 var vhost = require ('./vhost.js');
+var conf = require ('./conf.js');
 
 var app = express ();
 
@@ -27,5 +28,5 @@ app.get ('/github', resume.github);
 
 app.get ('*', resume.fourofour);
 
-app.listen (8000);
-console.log ('Listening on port 8000');
+app.listen (conf.server.port);
+console.log ('Listening on port '+conf.server.port);
