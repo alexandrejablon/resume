@@ -1,10 +1,11 @@
 start:
-	forever start app.js;
+	forever start resume-app.js;
 
 stop:
-	forever stop app.js
+	forever stop resume-app.js
 
-restart: stop start
+restart:
+	forever restart resume-app.js
 
 list:
 	forever list;
