@@ -1,7 +1,6 @@
 module.exports = {
   status: "doing an internship",
   education: {
-    heading: 'Education',
     id: 'education',
     content: [
       {
@@ -22,9 +21,8 @@ module.exports = {
       }
     ]
   },
-  career: {
-    heading: 'Career',
-    id: 'career',
+  experience: {
+    id: 'experience',
     content: [
       {
         key: '<b>From June 2013 to December 2013</b>',
@@ -120,7 +118,7 @@ module.exports = {
       }
     ]
   },
-  currents: {
+  skills: {
     heading: 'My skills',
     id: 'currents',
     content: [
@@ -173,14 +171,5 @@ module.exports = {
         icon: 'vim',
       }
     ]
-  },
-  this_site: {
-    heading: 'What is this website built with ?',
-    content: 'It is built with Node.js, Express.js and Redis (back-end), Backbone.js, jQuery, Underscore.js, Bootstrap and Google Fonts (front-end).'
-  },
-  contact: {
-    heading: 'Contact',
-    id: 'contact',
-    email: 'alex@jablon.me'
   }
 };

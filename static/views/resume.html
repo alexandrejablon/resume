@@ -59,17 +59,17 @@
     <script type="text/template" id="resume-template">
       <!-- Education Section -->
       <div class="row resume-row resume-item-title" style="margin-top:50px;">
-        <div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center"><%= education['heading'] %></h1></div>
+        <div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center">Education</h1></div>
       </div>
       <div class="row resume-row" style="margin:0">
         <div class="col-lg-12">
-          <% _.each (education['content'], function (item, index, list) { %>
+          <% _.each (education.content, function (item, index, list) { %>
             <div class="row resume-row">
-              <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-              <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+              <div class="col-lg-2"><div class="resume-padding-18"><%= item.key %></div></div>
+              <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item.content %></div></div>
             </div>
             <% if (index < list.length || index != 1) { %>
-              <div class="row resume-row <%= education['name'] %>-hideable hideable">
+              <div class="row resume-row <%= education.name %>-hideable hideable">
               <div class="col-lg-12 align-center"> &mdash; </div>
               </div>
             <% } %>
@@ -77,32 +77,32 @@
         </div>
       </div>
 
-      <!-- Career Section -->
+      <!-- Experience Section -->
       <div class="row resume-row resume-item-title"> 
-        <div class="col-lg-12 align-center"><h1 class="align-center"><%= career['heading'] %></h1></div>
+        <div class="col-lg-12 align-center"><h1 class="align-center">Experience</h1></div>
       </div>
-      <% _.each (career['content'], function (item, index, list) { %>
+      <% _.each (experience.content, function (item, index, list) { %>
         <% if (index == 0) { %>
           <div class="row resume-row">
         <% } else { %>
-          <div class="row resume-row <%= career['id'] %>-hideable hideable">
+          <div class="row resume-row <%= experience.id %>-hideable hideable">
         <% } %>
-            <div class="col-lg-2"><div class="resume-padding-18"><%= item['key'] %></div></div>
-            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item['content'] %></div></div>
+            <div class="col-lg-2"><div class="resume-padding-18"><%= item.key %></div></div>
+            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item.content %></div></div>
           </div>
         <% if (index == 0) { %>
           <div class="row resume-row">
             <div class="col-lg-12 align-center">
-              <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= career ['id'] %>">
-                <span class="btn-text-<%= career['id'] %>">See more...</span>
-                <span class="btn-text-<%= career['id'] %>" style="display:none;">See less...</span>
-                <span class="glyphicon  btn-icon-<%= career['id'] %> glyphicon-chevron-down"></span>
+              <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= experience.id %>">
+                <span class="btn-text-<%= experience.id %>">See more...</span>
+                <span class="btn-text-<%= experience.id %>" style="display:none;">See less...</span>
+                <span class="glyphicon  btn-icon-<%= experience.id %> glyphicon-chevron-down"></span>
               </span>
             </div>
           </div>
         <% } %>
         <% if (index < (list.length - 1) && index != 0) { %>
-          <div class="row resume-row <%= career['id'] %>-hideable hideable">
+          <div class="row resume-row <%= experience.id %>-hideable hideable">
             <div class="col-lg-12 align-center"> &mdash; </div>
           </div>
         <% } %>
@@ -111,7 +111,7 @@
       <!-- Places section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center"><%= places['heading'] %></h1>
+          <h1 class="align-center">Where I&#39;ve lived / traveled</h1>
         </div>
       </div>
       <div class="row resume-row">
@@ -119,8 +119,8 @@
         <img class="img-responsive" src="/static/img/map_small.jpg" />
       </div>
         <div id="map-large" class="col-lg-12">
-          <% _.each (places['content'], function (place) { %>
-            <img class="tooltip-origin" src="/static/img/<%= place['type'] %>.png" style="position:absolute;margin-left: <%= place['xcoord'] - 17 %>px;margin-top: <%= place['ycoord'] - 40 %>px " alt="<%= place['name'] %>" href="#" data-toggle="tooltip" title="<%= place['name'] %>"/>
+          <% _.each (places.content, function (place) { %>
+            <img class="tooltip-origin" src="/static/img/<%= place.type %>.png" style="position:absolute;margin-left: <%= place.xcoord - 17 %>px;margin-top: <%= place.ycoord - 40 %>px " alt="<%= place.name %>" href="#" data-toggle="tooltip" title="<%= place.name %>"/>
           <% }); %>
           <img src="/static/img/map_large.jpg" />
         </div>
@@ -129,14 +129,14 @@
       <!-- Projects section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center"><%= projects['heading'] %></h1>
+          <h1 class="align-center">Real-life / non-school team projects</h1>
         </div>
       </div>
       <div class="row resume-row">
         <div class="col-lg-12">
-          <% _.each (projects['content'], function (project) { %>
-            <div class="col-lg-2"><div class="resume-padding-18"><%= project['key'] %></div></div>
-            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project['content'] %></div></div>
+          <% _.each (projects.content, function (project) { %>
+            <div class="col-lg-2"><div class="resume-padding-18"><%= project.key %></div></div>
+            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project.content %></div></div>
           <% }); %>
         </div>
       </div>
@@ -144,42 +144,42 @@
       <!-- Interests section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center"><%= interests['heading'] %></h1>
+          <h1 class="align-center">Topics of interests</h1>
         </div>
       </div>
       <div class="row resume-row">
         <div class="col-lg-12">
-          <%= interests['content'] %>
+          <%= interests.content %>
         </div>
       </div>
 
       <!-- Now section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center"><%= now['heading'] %></h1>
+          <h1 class="align-center">What I&#39;m currently doing</h1>
         </div>
       </div>
       <div class="row resume-row">
         <div class="col-lg-3 col-xs-3">
-          <img src="/static/img/<%= now['image'] %>" alt="<%= now['name'] %>" class="img-thumbnail"/>
+          <img src="/static/img/<%= now.image %>" alt="<%= now.name %>" class="img-thumbnail"/>
         </div>
         <div class="col-lg-9 col-xs-9">
-          <p><%= now['content'] %></p>
+          <p><%= now.content %></p>
         </div>
       </div>
 
-      <!-- Currents section -->
+      <!-- Skills section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center"><%= currents['heading'] %></h1>
+          <h1 class="align-center">My skills</h1>
         </div>
       </div>
-      <% _.each (currents['content'], function (current, index, list) { %>
+      <% _.each (skills.content, function (skill, index, list) { %>
         <% if (index % 4 === 0) { %>
           <div class="row resume-row">
         <% } %>
         <div class="col-lg-3 col-xs-3 align-center">
-          <img class="img-thumbnail tooltip-origin" src="/static/img/<%= current['icon'] %>.png" alt="<%= current['name'] %>" data-toggle="tooltip" title="<%= current['name'] %>" data-placement="bottom"/>
+          <img class="img-thumbnail tooltip-origin" src="/static/img/<%= skill.icon %>.png" alt="<%= skill.name %>" data-toggle="tooltip" title="<%= skill.name %>" data-placement="bottom"/>
         </div>
         <% if (index % 4 === 3 || index == (list.length -1)) { %>
           </div>
@@ -189,16 +189,16 @@
       <!-- About this site section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center"><%= this_site['heading'] %></h1>
+          <h1 class="align-center">What is this website built with ?</h1>
         </div>
       </div>
       <div class="row resume-row">
-        <div class="col-lg-12"><%= this_site['content'] %></div>
+        <div class="col-lg-12">It is built with Node.js, Express.js and Redis (back-end), Backbone.js, jQuery, Underscore.js, Bootstrap and Google Fonts (front-end).</div>
       </div>
 
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
-          <h1 class="align-center resume-item-title"><%= contact['heading'] %></h1>
+          <h1 class="align-center resume-item-title">Contact</h1>
         </div>
       </div>
 
