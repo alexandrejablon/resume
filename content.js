@@ -57,7 +57,7 @@ module.exports = {
     id: 'now',
     name: 'INSA Lyon',
     image: 'insa.png',
-    content: 'I&#8217;m currently studying at INSA de Lyon in France, preparing a MSc. in Telecommunications. I&#8217;m in my last term.'
+    content: 'I&#8217;m currently studying at INSA de Lyon in France, preparing a MSc. in Telecommunications. <br/>I&#8217;m in my last term and looking for a Software Engineer position in a dynamic startup or a young company !'
   },
   interests: {
     heading: 'Topics of interests',
