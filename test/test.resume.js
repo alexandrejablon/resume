@@ -16,7 +16,7 @@ describe ('resume.js', function () {
       var req = {};
       var res = {
         json: function (actual) {
-          actual.should.have.properties('status', 'education', 'career', 'projects', 'interests', 'now', 'places', 'this_site', 'contact');
+          actual.should.have.properties('status', 'education', 'experience', 'projects', 'interests', 'now', 'places');
           done ();
         }
       };
