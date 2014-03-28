@@ -25,6 +25,7 @@ app.post ('/blob', resume.blob);
 app.get ('/robots.txt', resume.robots);
 app.get ('/linkedin', resume.linkedin);
 app.get ('/github', resume.github);
+app.get ('/npm', resume.npm);
 
 app.get ('*', resume.fourofour);
 

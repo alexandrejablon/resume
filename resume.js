@@ -87,3 +87,7 @@ var linkedin = exports.linkedin = function (req, res) {
 var github = exports.github = function (req, res) {
   res.redirect ('http://github.com/alexjab');
 };
+
+var npm = exports.npm = function (req, res) {
+  res.redirect ('http://npmjs.org/~alexjab');
+};
