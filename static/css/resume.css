@@ -64,16 +64,16 @@
   color: #D9534F;
 }
 
-.my-resume-title-text {
-  text-shadow: 1px 1px 0 #444444;
-  font-weight: bolder;
-}
-
 .my-resume-title-text:hover {
   color: #F5F7FA;
 }
 
 @media screen and (min-width: 1200px) {
+  .my-resume-title-text {
+    text-shadow: 1px 1px 0 #444444;
+    font-weight: bolder;
+  }
+
   body {
     font-weight: 300;
     font-size: medium;
@@ -124,6 +124,7 @@
     color: #444444;
     background-color: white;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 20px;
   }
 
   #mobile-label {
@@ -136,6 +137,10 @@
 }
 
 @media screen and (max-width: 1199px) {
+  .my-resume-title-text {
+    font-weight: bolder;
+  }
+
   body {
     font-weight: 300;
     font-size: medium;
@@ -187,18 +192,6 @@
 #heading404 {
   text-align:center;
   font-size: 144px;
-}
-
-#footer404 {
-}
-
-.btn-success {
-}
-
-.btn-primary {
-}
-
-.btn-default {
 }
 
 .device-label {

@@ -41,9 +41,6 @@
     <div class="blurry-back" style="height: 308px"></div>
     <div id="resume-wide">
       <div id="resume" class="container">
-        <div class="resume-item-title" style="text-align:center">
-          <h1>Loading...</h1>
-        </div>
       </div>
       <hr/>
       <div class="contact-footer">
@@ -67,8 +64,8 @@
         <div class="col-lg-12">
           <% _.each (education.content, function (item, index, list) { %>
             <div class="row resume-row">
-              <div class="col-lg-2"><div class="resume-padding-18"><%= item.key %></div></div>
-              <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item.content %></div></div>
+              <div class="col-lg-2"><div class="resume-padding-18"><b><%= item.key %></b></div></div>
+              <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= item.content %></p></div></div>
             </div>
             <% if (index < list.length || index != 1) { %>
               <div class="row resume-row <%= education.name %>-hideable hideable">
@@ -89,8 +86,8 @@
         <% } else { %>
           <div class="row resume-row <%= experience.id %>-hideable hideable">
         <% } %>
-            <div class="col-lg-2"><div class="resume-padding-18"><%= item.key %></div></div>
-            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= item.content %></div></div>
+            <div class="col-lg-2"><div class="resume-padding-18"><b><%= item.key %></b></div></div>
+            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= item.content %></p></div></div>
           </div>
         <% if (index == 0) { %>
           <div class="row resume-row">
@@ -109,6 +106,39 @@
           </div>
         <% } %>
       <% }); %>
+
+      <!-- Skills section -->
+      <div class="row resume-row resume-item-title">
+        <div class="col-lg-12">
+          <h1 class="align-center">My skills</h1>
+        </div>
+      </div>
+      <% _.each (skills.content, function (skill, index, list) { %>
+        <% if (index % 4 === 0) { %>
+          <div class="row resume-row">
+        <% } %>
+        <div class="col-lg-3 col-xs-3 align-center">
+          <img class="img-thumbnail tooltip-origin" src="/static/img/<%= skill.icon %>.png" alt="<%= skill.name %>" data-toggle="tooltip" title="<%= skill.name %>" data-placement="bottom"/>
+        </div>
+        <% if (index % 4 === 3 || index == (list.length -1)) { %>
+          </div>
+        <% } %>
+      <% }); %>
+
+      <!-- Now section -->
+      <div class="row resume-row resume-item-title">
+        <div class="col-lg-12">
+          <h1 class="align-center">What I&#39;m currently doing</h1>
+        </div>
+      </div>
+      <div class="row resume-row">
+        <div class="col-lg-3 col-xs-3">
+          <img src="/static/img/<%= now.image %>" alt="<%= now.name %>" class="img-thumbnail"/>
+        </div>
+        <div class="col-lg-9 col-xs-9">
+          <p><%= now.content %></p>
+        </div>
+      </div>
 
       <!-- Places section -->
       <div class="row resume-row resume-item-title">
@@ -137,8 +167,8 @@
       <div class="row resume-row">
         <div class="col-lg-12">
           <% _.each (projects.content, function (project) { %>
-            <div class="col-lg-2"><div class="resume-padding-18"><%= project.key %></div></div>
-            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><%= project.content %></div></div>
+            <div class="col-lg-2"><div class="resume-padding-18"><b><%= project.key %></b></div></div>
+            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= project.content %></p></div></div>
           <% }); %>
         </div>
       </div>
@@ -155,39 +185,6 @@
         </div>
       </div>
 
-      <!-- Now section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">What I&#39;m currently doing</h1>
-        </div>
-      </div>
-      <div class="row resume-row">
-        <div class="col-lg-3 col-xs-3">
-          <img src="/static/img/<%= now.image %>" alt="<%= now.name %>" class="img-thumbnail"/>
-        </div>
-        <div class="col-lg-9 col-xs-9">
-          <p><%= now.content %></p>
-        </div>
-      </div>
-
-      <!-- Skills section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">My skills</h1>
-        </div>
-      </div>
-      <% _.each (skills.content, function (skill, index, list) { %>
-        <% if (index % 4 === 0) { %>
-          <div class="row resume-row">
-        <% } %>
-        <div class="col-lg-3 col-xs-3 align-center">
-          <img class="img-thumbnail tooltip-origin" src="/static/img/<%= skill.icon %>.png" alt="<%= skill.name %>" data-toggle="tooltip" title="<%= skill.name %>" data-placement="bottom"/>
-        </div>
-        <% if (index % 4 === 3 || index == (list.length -1)) { %>
-          </div>
-        <% } %>
-      <% }); %>
-
       <!-- About this site section -->
       <div class="row resume-row resume-item-title">
         <div class="col-lg-12">
@@ -195,7 +192,7 @@
         </div>
       </div>
       <div class="row resume-row">
-        <div class="col-lg-12">It is built with Node.js, Express.js and Redis (back-end), Backbone.js, jQuery, Underscore.js, Bootstrap and Bootflat and gulp (front-end).</div>
+        <div class="col-lg-12">It is built with <b>node.js</b>, <b>express</b> and <b>redis</b> (back-end), <b>backbone.js</b>, <b>jQuery</b>, <b>underscore.js</b>, <b>Bootstrap</b> and <b>Bootflat</b>, <b>Font Awesome</b>, and <b>gulp</b> (front-end).</div>
       </div>
 
       <div class="row resume-row resume-item-title">

@@ -4,20 +4,20 @@ module.exports = {
     id: 'education',
     content: [
       {
-        key: '<b>Since 2011</b>',
-        content: '<p><b>MSc. (class of 2014)</b> at the Department of <b>Telecommunications, Services and Applications</b> at <b>INSA de Lyon</b> (National Institute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at <b>Tampere University of Technology</b> in Tampere, Finland.</p>'
+        key: 'Since 2011',
+        content: '<b>MSc. (class of 2014)</b> at the Department of <b>Telecommunications, Services and Applications</b> at <b>INSA de Lyon</b> (National Institute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at <b>Tampere University of Technology</b> in Tampere, Finland.'
       },
       {
-        key: '<b>From 2009 to 2011</b>',
-        content: '<p>Preparatory degree course at <i>INSA de Lyon</i>.</p>'
+        key: 'From 2009 to 2011',
+        content: 'Preparatory degree course at <i>INSA de Lyon</i>.'
       },
       {
-        key: '<b>Languages</b>',
-        content: '<p><ul class="no-bullet-list"><li> &ndash; <b>English</b>: good standard for reading, writing and speaking.</li><li> &ndash; French: native speaker.</li></ul></p>'
+        key: 'Languages',
+        content: '<ul class="no-bullet-list"><li> &ndash; <b>English</b>: fluent speaker (reader and writer as well).</li><li> &ndash; French: native speaker.</li></ul>'
       },
       {
-        key: '<b>Computer Science</b>',
-        content: '<p><b>Keywords and Languages: GNU/Linux, Agility, Python, REST, Node.js, Backbone.js, MongoDB, RethinkDB, Git. </b></p>'
+        key: 'Computer Science',
+        content: '<b>Keywords and Languages: GNU/Linux, Agility, Python, REST, Node.js, Backbone.js, MongoDB, RethinkDB, Git. </b>'
       }
     ]
   },
@@ -25,20 +25,20 @@ module.exports = {
     id: 'experience',
     content: [
       {
-        key: '<b>From June 2013 to December 2013</b>',
-        content: '<p><b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>The folks at Work4 Labs make a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our database,</li><li> &ndash; Development and Implementation of specific options, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).</p>'
+        key: 'From June 2013 to December 2013',
+        content: '<b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>The folks at Work4 Labs make a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our system,</li><li> &ndash; Development and Implementation of specific options and plugins, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).'
       },
       {
-        key: '<b>July &ndash; August 2012</b>',
-        content: '<p><b>Developer Intern</b> at <b>Finsecur</b> (150 employees): I designed and coded a universal test bench program in Python for fire detection equipment.</p>'
+        key: 'July &ndash; August 2012',
+        content: '<b>Developer Intern</b> at <b>Finsecur</b> (150 employees): I designed and coded a universal test bench program in Python for fire detection equipment.'
       },
       {
-        key: '<b>July &ndash; August 2011</b>',
-        content: '<p><b>Developer Intern</b> at <b>Hutchinson</b> (turnover &euro; 3 billion, 27,000 employees): I designed and implemented a Python script and UI to launch computations on a computer, a virtual machine and a cluster.</p>'
+        key: 'July &ndash; August 2011',
+        content: '<b>Developer Intern</b> at <b>Hutchinson</b> (turnover &euro; 3 billion, 27,000 employees): I designed and implemented a Python script and UI to launch computations on a computer, a virtual machine and a cluster.'
       },
       {
-        key: '<b>July 2010</b>',
-        content: '<p>1-month internship at <b>La Pizza de Manosque</b> (50 employees): I worked on the pizza production line and designed and implemented a Computerized Maintenance Management System with MS Access.</p><p>Best Internship Report awarded by the <i>Association des Amis de l&#8217;Université de Lyon</i> (the Friends of University of Lyon).</p>'
+        key: 'July 2010',
+        content: '1-month internship at <b>La Pizza de Manosque</b> (50 employees): I worked on the pizza production line and designed and implemented a Computerized Maintenance Management System with MS Access.</p><p>Best Internship Report awarded by the <i>Association des Amis de l&#8217;Université de Lyon</i> (the Friends of University of Lyon).'
       }
     ]
   },
@@ -47,7 +47,7 @@ module.exports = {
     id: 'projects',
     content: [
       {
-        key: '<b>2010 to 2012</b>',
+        key: '2010 to 2012',
         content: 'I worked in the communications committee of the 37th and 38th editions of the <i>24 Heures de l&#8217;INSA</i>, the biggest student festival in France which gathers 60,000 visitors in three days: I managed the website of the festival and I designed the leaflets, the T-Shirt and the cup logos. I worked as a bar manager during the events.'
       }
     ],
@@ -131,10 +131,6 @@ module.exports = {
         icon: 'js_stuff',
       },
       {
-        name: 'Bootstrap',
-        icon: 'bootstrap',
-      },
-      {
         name: 'Python',
         icon: 'python',
       },
@@ -153,6 +149,10 @@ module.exports = {
       {
         name: 'git',
         icon: 'git',
+      },
+      {
+        name: 'Bootstrap',
+        icon: 'bootstrap',
       },
       {
         name: 'The GIMP',
