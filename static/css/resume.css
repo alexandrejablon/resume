@@ -28,7 +28,11 @@
 .resume-item-title {
   margin-top: 75px;
   margin-bottom: 25px;
-  color: #D80000;
+  color:#DA4453;
+}
+
+.resume-item-title h1 {
+  font-size: xx-large;
 }
 
 .no-bullet-list {
@@ -40,14 +44,8 @@
 }
 
 .navbar-brand {
-  font-family: 'Pacifico', cursive;
   font-size: x-large;
   color: white;
-}
-
-.resume-item-title h1 {
-  font-size: xx-large;
-  font-family: 'Pacifico', cursive;
 }
 
 #toggle-blob-row {
@@ -68,13 +66,15 @@
 
 .my-resume-title-text {
   text-shadow: 1px 1px 0 #444444;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
+.my-resume-title-text:hover {
+  color: #F5F7FA;
+}
 
 @media screen and (min-width: 1200px) {
   body {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: medium;
     background-image: url('/static/img/blurry_back.jpg');
@@ -137,7 +137,6 @@
 
 @media screen and (max-width: 1199px) {
   body {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: medium;
     background-color: white;
@@ -186,28 +185,24 @@
 }
 
 #heading404 {
-  font-family: 'Open Sans', sans-serif;
   text-align:center;
   font-size: 144px;
 }
 
 #footer404 {
-  font-family: 'Open Sans', sans-serif;
 }
 
 .btn-success {
-  box-shadow: 0 4px #388038;
 }
 
 .btn-primary {
-  box-shadow: 0 4px #2b6699;
 }
 
 .btn-default {
-  box-shadow: 0 4px lightgrey;
 }
 
 .device-label {
   font-size: small;
   cursor: default;
 }
+
