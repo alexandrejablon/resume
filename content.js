@@ -135,6 +135,10 @@ module.exports = {
         icon: 'python',
       },
       {
+        name: 'Ubuntu Server',
+        icon: 'ubuntu',
+      },
+      {
         name: 'Redis',
         icon: 'redis',
       },
@@ -149,6 +153,10 @@ module.exports = {
       {
         name: 'git',
         icon: 'git',
+      },
+      {
+        name: 'docker',
+        icon: 'docker',
       },
       {
         name: 'Bootstrap',
