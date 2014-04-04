@@ -1,3 +1,16 @@
+.resume-well {
+  margin-top: 45px;
+  margin-bottom: 55px;
+}
+
+.separator {
+  width: 240px;
+}
+
+.header-link-row {
+  font-size: xx-large;
+}
+
 .align-center {
   text-align: center;
 }
@@ -7,8 +20,8 @@
 }
 
 #resume {
-  background-color: white;
   position: relative;
+  background-color: white;
 }
 
 .resume-padding-18 {
@@ -25,10 +38,10 @@
   margin-bottom: 10px;
 }
 
-.resume-item-title {
-  margin-top: 75px;
+.resume-heading {
   margin-bottom: 25px;
   color:#DA4453;
+  font-size: xx-large;
 }
 
 .resume-item-title h1 {
@@ -64,20 +77,11 @@
   color: #D9534F;
 }
 
-.my-resume-title-text:hover {
-  color: #F5F7FA;
-}
-
 @media screen and (min-width: 1200px) {
-  .my-resume-title-text {
-    text-shadow: 1px 1px 0 #444444;
-    font-weight: bolder;
-  }
-
   body {
     font-weight: 300;
     font-size: medium;
-    background-image: url('/static/img/blurry_back.jpg');
+    background-image: url('/static/img/background.jpg');
     background-size: cover;
     background-attachment: fixed;
   }
@@ -90,22 +94,17 @@
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
   }
 
-  .my-resume-title {
+  #header {
     width:100%;
     position:fixed;
     z-index: 0;
     color: white;
-    top: 75px;
+    top: 50px;
+    font-size: 64px;
   }
 
-  .my-resume-title-left {
-    font-size: xx-large;
-    text-align: right;
-  }
-
-  .my-resume-title-right {
-    font-size: x-large;
-    text-align: left;
+  .blurry-back {
+    height: 350px;
   }
 
   .pre-title-anchor {
@@ -134,34 +133,26 @@
   #desktop-label {
     display: inline;
   }
+
+  .header-link {
+    color: #F5F7FA;
+    margin-left:5px;
+    margin-right:5px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
-  .my-resume-title-text {
-    font-weight: bolder;
-  }
-
   body {
     font-weight: 300;
     font-size: medium;
     background-color: white;
   }
 
-  .my-resume-title {
+  #header {
     width:100%;
-    font-size: 72px;
     color: #555;
-    padding-top:50px;
-  }
-
-  .my-resume-title-left {
-    font-size: x-large;
-    text-align: left;
-  }
-
-  .my-resume-title-right {
-    font-size: large;
-    text-align: left;
+    margin-top: 50px;
+    font-size: 64px;
   }
 
   .blurry-back {
@@ -186,6 +177,12 @@
 
   #desktop-label {
     display: none;
+  }
+
+  .header-link {
+    color: #555;
+    margin-left:5px;
+    margin-right:5px;
   }
 }
 

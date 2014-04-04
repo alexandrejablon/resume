@@ -12,7 +12,7 @@ ResumeView = Backbone.View.extend({
   initialize: function () {
     _.bindAll(this, 'render');  
     this.model.bind('change', this.render);  
-    this.$el.html ('<div class="resume-item-title" style="text-align:center"><h1>Loading...</h1></div>');
+    this.$el.html ('<div class="resume-well"><div class="resume-heading" style="text-align:center">Loading...</div></div>');
     this.model.fetch ();
   },
   render: function () {

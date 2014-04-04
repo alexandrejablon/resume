@@ -11,241 +11,255 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
-    <div id="home"></div>
-
-    <div class="my-resume-title">
+    <div id="header">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 my-resume-title-left">
-            <ul class="no-bullet-list">
-              <li><img src="/static/img/me.png" width="100" alt="me" /></li>
-              <li><span class="my-resume-title-text">Alex Jablon</span>
-                <span class="label label-primary label-sm device-label tooltip-element" id="mobile-label" data-toggle="tooltip" data-placement="right" title="The layout of my resume has been adapted to your screen size">Mobile</span>
-                <span class="label label-primary label-sm device-label tooltip-element" id="desktop-label" data-toggle="tooltip" data-placement="bottom" title="The layout of my resume has been adapted to your screen size">Desktop</span>
-              </li>
-            </ul>
+          <div class="col-lg-12 align-center">
+            Alex Jablon
           </div>
-          <div class="col-lg-6 my-resume-title-right">
-            <ul class="no-bullet-list">
-              <li> <span class="fa fa-globe"></span> <span class="my-resume-title-text">alex.jablon.me</span></li>
-              <li> <span class="fa fa-inbox"></span> <span class="my-resume-title-text">alex@jablon.me</span></li>
-              <li> <span class="fa fa-linkedin"></span> <a href="//alex.jablon.me/linkedin" class="my-resume-title-text">alex.jablon.me/linkedin</a></li>
-              <li> <span class="fa fa-github"></span> <a href="//alex.jablon.me/github" class="my-resume-title-text">alex.jablon.me/github</a></li>
-              <li> <span class="fa fa-file"></span> <a href="//alex.jablon.me/npm" class="my-resume-title-text">alex.jablon.me/npm</a></li>
-            </ul>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 align-center">
+            <img src="/static/img/me.png" width="100" alt="me" />
+          </div>
+        </div>
+        <div class="row header-link-row">
+          <div class="col-lg-12 align-center">
+            <a href="//alex.jablon.me" class="header-link header-tooltip" title="alex.jablon.me"><span class="fa fa-globe" ></span></a>
+            <a href="mailto:alex@jablon.me" class="header-link header-tooltip" title="alex@jablon.me"><span class="fa fa-inbox"></span></a>
+            <a href="/linkedin" class="header-link header-tooltip" title="/linkedin"><span class="fa fa-linkedin-square"></span></a>
+            <a href="/github" class="header-link header-tooltip" title="/github"><span class="fa fa-github"></span></a>
+            <a href="/npm" class="header-link header-tooltip" title="/npm"><span class="fa fa-file"></span></a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="blurry-back" style="height: 308px"></div>
+    <div class="blurry-back"></div>
     <div id="resume-wide">
-      <div id="resume" class="container">
-      </div>
+      <div id="resume" class="container"></div>
       <hr/>
       <div class="contact-footer">
         <ul class="no-bullet-list">
           <li>&copy; Alexandre Jablon 2013 &ndash; 2014</li>
           <li><img src="/static/img/glyphicons_globe.png" width="18" /> alex.jablon.me</li>
           <li><img src="/static/img/glyphicons_envelope.png" width="18" /> alex@jablon.me</li>
-          <li><img src="/static/img/glyphicons_linked_in.png" width="18" /> <a href="//alex.jablon.me/linkedin">alex.jablon.me/linkedin</a></li>
-          <li><img src="/static/img/glyphicons_github.png" width="18" /> <a href="//alex.jablon.me/github">alex.jablon.me/github</a></li>
-          <li><img src="/static/img/glyphicons_npm.png" width="18" /> <a href="//alex.jablon.me/npm">alex.jablon.me/npm</a></li>
+          <li><img src="/static/img/glyphicons_linked_in.png" width="18" /> <a href="/linkedin">alex.jablon.me/linkedin</a></li>
+          <li><img src="/static/img/glyphicons_github.png" width="18" /> <a href="/github">alex.jablon.me/github</a></li>
+          <li><img src="/static/img/glyphicons_npm.png" width="18" /> <a href="/npm">alex.jablon.me/npm</a></li>
         </ul>
       </div>
     </div>
 
     <script type="text/template" id="resume-template">
-      <!-- Education Section -->
-      <div class="row resume-row resume-item-title" style="margin-top:50px;">
-        <div class="col-lg-12 align-center"><h1  style="margin-top:25px;"class="align-center">Education</h1></div>
+      <div class="resume-well">
+        <!-- Education Section -->
+        <div class="row resume-heading">
+          <div class="col-lg-12 align-center">Education</div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-12">
+            <% _.each (education.content, function (item, index, list) { %>
+              <div class="row resume-row">
+                <div class="col-lg-2"><div class="resume-padding-18"><b><%= item.key %></b></div></div>
+                <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= item.content %></p></div></div>
+              </div>
+              <% if (index < list.length || index != 1) { %>
+                <div class="row resume-row <%= education.name %>-hideable hideable">
+                <div class="col-lg-12 align-center"> &mdash; </div>
+                </div>
+              <% } %>
+            <% }); %>
+          </div>
+        </div>
       </div>
-      <div class="row resume-row" style="margin:0">
-        <div class="col-lg-12">
-          <% _.each (education.content, function (item, index, list) { %>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- Experience Section -->
+        <div class="row resume-heading">
+          <div class="col-lg-12 align-center">Experience</div>
+        </div>
+        <% _.each (experience.content, function (item, index, list) { %>
+          <% if (index == 0) { %>
             <div class="row resume-row">
+          <% } else { %>
+            <div class="row resume-row <%= experience.id %>-hideable hideable">
+          <% } %>
               <div class="col-lg-2"><div class="resume-padding-18"><b><%= item.key %></b></div></div>
               <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= item.content %></p></div></div>
             </div>
-            <% if (index < list.length || index != 1) { %>
-              <div class="row resume-row <%= education.name %>-hideable hideable">
+          <% if (index == 0) { %>
+            <div class="row resume-row">
+              <div class="col-lg-12 align-center">
+                <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= experience.id %>">
+                  <span class="btn-text-<%= experience.id %>">See more...</span>
+                  <span class="btn-text-<%= experience.id %>" style="display:none;">See less...</span>
+                  <span class="glyphicon  btn-icon-<%= experience.id %> glyphicon-chevron-down"></span>
+                </span>
+              </div>
+            </div>
+          <% } %>
+          <% if (index < (list.length - 1) && index != 0) { %>
+            <div class="row resume-row <%= experience.id %>-hideable hideable">
               <div class="col-lg-12 align-center"> &mdash; </div>
+            </div>
+          <% } %>
+        <% }); %>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- Skills section -->
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">My skills</div>
+        </div>
+        <% _.each (skills.content, function (skill, index, list) { %>
+          <% if (index % 4 === 0) { %>
+            <div class="row resume-row">
+          <% } %>
+          <div class="col-lg-3 col-xs-3 align-center">
+            <img class="img-thumbnail tooltip-origin" src="/static/img/<%= skill.icon %>.png" alt="<%= skill.name %>" data-toggle="tooltip" title="<%= skill.name %>" data-placement="bottom"/>
+          </div>
+          <% if (index % 4 === 3 || index == (list.length -1)) { %>
+            </div>
+          <% } %>
+        <% }); %>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- Now section -->
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">What I&#39;m currently doing</div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-3 col-xs-3">
+            <img src="/static/img/<%= now.image %>" alt="<%= now.name %>" class="img-thumbnail"/>
+          </div>
+          <div class="col-lg-9 col-xs-9">
+            <p><%= now.content %></p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- Places section -->
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">Where I&#39;ve lived / traveled</div>
+        </div>
+        <div class="row resume-row">
+        <div id="map-small" class="col-xs-12">
+          <img class="img-responsive" src="/static/img/map_small.jpg" />
+        </div>
+          <div id="map-large" class="col-lg-12">
+            <% _.each (places.content, function (place) { %>
+              <img class="tooltip-origin" src="/static/img/<%= place.type %>.png" style="position:absolute;margin-left: <%= place.xcoord - 17 %>px;margin-top: <%= place.ycoord - 40 %>px " alt="<%= place.name %>" href="#" data-toggle="tooltip" title="<%= place.name %>"/>
+            <% }); %>
+            <img src="/static/img/map_large.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- Projects section -->
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">Real-life / non-school team projects</div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-12">
+            <% _.each (projects.content, function (project) { %>
+              <div class="col-lg-2"><div class="resume-padding-18"><b><%= project.key %></b></div></div>
+              <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= project.content %></p></div></div>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- Interests section -->
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">Topics of interests</div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-12">
+            <%= interests.content %>
+          </div>
+        </div>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <!-- About this site section -->
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">What is this website built with ?</div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-12">It is built with <b>node.js</b>, <b>express</b>, and <b>redis</b> (back-end), <b>backbone.js</b>, <b>jQuery</b>, <b>underscore.js</b>, <b>Bootstrap</b> and <b>Bootflat</b>, <b>Font Awesome</b>, and <b>gulp</b> (front-end).</div>
+        </div>
+      </div>
+
+      <hr class="separator"/>
+
+      <div class="resume-well">
+        <div class="row resume-heading align-center">
+          <div class="col-lg-12">Contact</div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-12">
+            <div class="align-center">
+              <a type="button" class="btn btn-primary" href="/linkedin">
+                My LinkedIn profile
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row resume-row">
+          <div class="col-lg-12">
+            <div class="align-center">
+              <a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
+                <span class="glyphicon glyphicon-envelope"></span>
+                Send me a message
+              </a>
+            </div>
+          </div>
+        </div>
+        <div id="toggle-blob-row" class="row resume-row">
+          <div class="col-lg-offset-3 col-lg-6 col-xs-12">
+            <form role="form">
+              <div class="form-group" id="form-group-blob-from">
+                <label for="blobFrom" class="control-label">Email / Name : </label>
+                <input type="text" class="form-control" id="blobFrom" placeholder="user@example.org, ...">
+                <div class="blob-error" id="blob-from-error"></div>
               </div>
-            <% } %>
-          <% }); %>
-        </div>
-      </div>
-
-      <!-- Experience Section -->
-      <div class="row resume-row resume-item-title"> 
-        <div class="col-lg-12 align-center"><h1 class="align-center">Experience</h1></div>
-      </div>
-      <% _.each (experience.content, function (item, index, list) { %>
-        <% if (index == 0) { %>
-          <div class="row resume-row">
-        <% } else { %>
-          <div class="row resume-row <%= experience.id %>-hideable hideable">
-        <% } %>
-            <div class="col-lg-2"><div class="resume-padding-18"><b><%= item.key %></b></div></div>
-            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= item.content %></p></div></div>
-          </div>
-        <% if (index == 0) { %>
-          <div class="row resume-row">
-            <div class="col-lg-12 align-center">
-              <span type="button" class="btn btn-toggle-content btn-success" data-content="<%= experience.id %>">
-                <span class="btn-text-<%= experience.id %>">See more...</span>
-                <span class="btn-text-<%= experience.id %>" style="display:none;">See less...</span>
-                <span class="glyphicon  btn-icon-<%= experience.id %> glyphicon-chevron-down"></span>
-              </span>
-            </div>
-          </div>
-        <% } %>
-        <% if (index < (list.length - 1) && index != 0) { %>
-          <div class="row resume-row <%= experience.id %>-hideable hideable">
-            <div class="col-lg-12 align-center"> &mdash; </div>
-          </div>
-        <% } %>
-      <% }); %>
-
-      <!-- Skills section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">My skills</h1>
-        </div>
-      </div>
-      <% _.each (skills.content, function (skill, index, list) { %>
-        <% if (index % 4 === 0) { %>
-          <div class="row resume-row">
-        <% } %>
-        <div class="col-lg-3 col-xs-3 align-center">
-          <img class="img-thumbnail tooltip-origin" src="/static/img/<%= skill.icon %>.png" alt="<%= skill.name %>" data-toggle="tooltip" title="<%= skill.name %>" data-placement="bottom"/>
-        </div>
-        <% if (index % 4 === 3 || index == (list.length -1)) { %>
-          </div>
-        <% } %>
-      <% }); %>
-
-      <!-- Now section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">What I&#39;m currently doing</h1>
-        </div>
-      </div>
-      <div class="row resume-row">
-        <div class="col-lg-3 col-xs-3">
-          <img src="/static/img/<%= now.image %>" alt="<%= now.name %>" class="img-thumbnail"/>
-        </div>
-        <div class="col-lg-9 col-xs-9">
-          <p><%= now.content %></p>
-        </div>
-      </div>
-
-      <!-- Places section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">Where I&#39;ve lived / traveled</h1>
-        </div>
-      </div>
-      <div class="row resume-row">
-      <div id="map-small" class="col-xs-12">
-        <img class="img-responsive" src="/static/img/map_small.jpg" />
-      </div>
-        <div id="map-large" class="col-lg-12">
-          <% _.each (places.content, function (place) { %>
-            <img class="tooltip-origin" src="/static/img/<%= place.type %>.png" style="position:absolute;margin-left: <%= place.xcoord - 17 %>px;margin-top: <%= place.ycoord - 40 %>px " alt="<%= place.name %>" href="#" data-toggle="tooltip" title="<%= place.name %>"/>
-          <% }); %>
-          <img src="/static/img/map_large.jpg" />
-        </div>
-      </div>
-
-      <!-- Projects section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">Real-life / non-school team projects</h1>
-        </div>
-      </div>
-      <div class="row resume-row">
-        <div class="col-lg-12">
-          <% _.each (projects.content, function (project) { %>
-            <div class="col-lg-2"><div class="resume-padding-18"><b><%= project.key %></b></div></div>
-            <div class="col-lg-10"><div class="resume-padding-18" style="border-left: 3px solid lightgrey"><p><%= project.content %></p></div></div>
-          <% }); %>
-        </div>
-      </div>
-
-      <!-- Interests section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">Topics of interests</h1>
-        </div>
-      </div>
-      <div class="row resume-row">
-        <div class="col-lg-12">
-          <%= interests.content %>
-        </div>
-      </div>
-
-      <!-- About this site section -->
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center">What is this website built with ?</h1>
-        </div>
-      </div>
-      <div class="row resume-row">
-        <div class="col-lg-12">It is built with <b>node.js</b>, <b>express</b> and <b>redis</b> (back-end), <b>backbone.js</b>, <b>jQuery</b>, <b>underscore.js</b>, <b>Bootstrap</b> and <b>Bootflat</b>, <b>Font Awesome</b>, and <b>gulp</b> (front-end).</div>
-      </div>
-
-      <div class="row resume-row resume-item-title">
-        <div class="col-lg-12">
-          <h1 class="align-center resume-item-title">Contact</h1>
-        </div>
-      </div>
-
-      <div class="row resume-row">
-        <div class="col-lg-12">
-          <div class="align-center">
-            <a type="button" class="btn btn-primary" href="/linkedin" target="_blank">
-              My LinkedIn profile
-            </a>
-          </div>
-        </div>
-      </div> 
-
-      <div class="row resume-row">
-        <div class="col-lg-12">
-          <div class="align-center">
-            <a type="button" class="btn btn-success btn-lg" id="btn-toggle-blob">
-              <span class="glyphicon glyphicon-envelope"></span>
-              Send me a message
-            </a>
-          </div>
-        </div>
-      </div>
-      <div id="toggle-blob-row" class="row resume-row">
-        <div class="col-lg-offset-3 col-lg-6 col-xs-12">
-          <form role="form">
-            <div class="form-group" id="form-group-blob-from">
-              <label for="blobFrom" class="control-label">Email / Name : </label>
-              <input type="text" class="form-control" id="blobFrom" placeholder="user@example.org, ...">
-              <div class="blob-error" id="blob-from-error"></div>
-            </div>
-            <div class="form-group" id="form-group-blob-content">
-              <label for="blobContent" class="control-label">Message : </label>
-              <textarea class="form-control" id="blobContent" rows="5" placeholder="Write something..."></textarea>
-              <div class="blob-error" id="blob-content-error"></div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-lg-4 col-xs-6">
-                  <button type="button" class="btn btn-success" id="btn-send-blob">Click here to send it!</button>
+              <div class="form-group" id="form-group-blob-content">
+                <label for="blobContent" class="control-label">Message : </label>
+                <textarea class="form-control" id="blobContent" rows="5" placeholder="Write something..."></textarea>
+                <div class="blob-error" id="blob-content-error"></div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-4 col-xs-6">
+                    <button type="button" class="btn btn-success" id="btn-send-blob">Click here to send it!</button>
+                  </div>
+                  <div class="col-lg-8 col-xs-6 align-left" id="blob-status"></div>
                 </div>
-                <div class="col-lg-8 col-xs-6 align-left" id="blob-status"></div>
               </div>
-            </div>
-            <div class="form-group">
-              <small style="color: grey"><a href="mailto:alex@jablon.me">Click here</a> to use your regular email client.</small>
-            </div>
-          </form>
+              <div class="form-group">
+                <small style="color: grey"><a href="mailto:alex@jablon.me">Click here</a> to use your regular email client.</small>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </script>
@@ -269,6 +283,10 @@
     <script type="text/javascript" src="/static/js/resume.min.js"></script>
     <script type="text/javascript">
       $ ('.tooltip-element').tooltip ();
+      $ ('.header-tooltip').tooltip ({
+        placement: 'bottom',
+        toggle: 'tooltip'
+      });
     </script>
   </body>
 </html>

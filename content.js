@@ -17,7 +17,7 @@ module.exports = {
       },
       {
         key: 'Computer Science',
-        content: '<b>Keywords and Languages: GNU/Linux, Agility, Python, REST, Node.js, Backbone.js, MongoDB, RethinkDB, Git. </b>'
+        content: '<b>Keywords and Languages: GNU/Linux, Agility, Node.js, Python, Backbone.js, MongoDB, RethinkDB, Git. </b>'
       }
     ]
   },
