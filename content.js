@@ -13,7 +13,7 @@ module.exports = {
       },
       {
         key: 'Languages',
-        content: '<ul class="no-bullet-list"><li> &ndash; <b>English</b>: fluent speaker (reader and writer as well).</li><li> &ndash; French: native speaker.</li></ul>'
+        content: '<ul class="no-bullet-list"><li> &ndash; <b>English</b>: fluent speaker (reader and writer as well),</li><li> &ndash; French: native speaker.</li></ul>'
       },
       {
         key: 'Computer Science',
