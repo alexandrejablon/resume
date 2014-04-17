@@ -1,11 +1,11 @@
 start:
-	forever -o out.log -e err.log start resume-app.js
+	forever -o out.log -e err.log start resume.js
 
 stop:
-	forever stop resume-app.js
+	forever stop resume.js
 
 restart:
-	forever -o out.log -e err.log restart resume-app.js -l log.log -o out.log -e err.log
+	forever -o out.log -e err.log restart resume.js -l log.log -o out.log -e err.log
 
 list:
 	forever list;
