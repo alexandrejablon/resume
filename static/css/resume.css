@@ -99,8 +99,16 @@
     position:fixed;
     z-index: 0;
     color: white;
-    top: 50px;
+    top: 10px;
+  }
+
+  #header-me {
     font-size: 64px;
+  }
+
+  #header-subtitle {
+    font-size: 24px;
+    margin-bottom:20px;
   }
 
   .blurry-back {
@@ -139,6 +147,14 @@
     margin-left:5px;
     margin-right:5px;
   }
+
+  .mobile-block {
+    display: none;
+  }
+
+  .desktop-block {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -151,8 +167,16 @@
   #header {
     width:100%;
     color: #555;
-    margin-top: 50px;
+    margin-top: 30px;
+  }
+
+  #header-me {
     font-size: 64px;
+  }
+
+  #header-subtitle {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 
   .blurry-back {
@@ -183,6 +207,14 @@
     color: #555;
     margin-left:5px;
     margin-right:5px;
+  }
+
+  .mobile-block {
+    display: block;
+  }
+
+  .desktop-block {
+    display: none;
   }
 }
 
