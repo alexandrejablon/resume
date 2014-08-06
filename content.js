@@ -5,19 +5,15 @@ module.exports = {
     content: [
       {
         key: 'Since 2011',
-        content: '<b>MSc. (class of 2014)</b> at the Department of <b>Telecommunications, Services and Applications</b> at <b>INSA de Lyon</b> (National Institute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at <b>Tampere University of Technology</b> in Tampere, Finland.'
-      },
-      {
-        key: 'From 2009 to 2011',
-        content: 'Preparatory degree course at <i>INSA de Lyon</i>.'
+        content: '<b>MSc. (class of 2014)</b> at the Department of <b>Telecommunications, Services and Applications</b> at INSA de Lyon (National Institute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at Tampere University of Technology in Tampere, Finland.'
       },
       {
         key: 'Languages',
-        content: '<ul class="no-bullet-list"><li> &ndash; <b>English</b>: fluent speaker (reader and writer as well),</li><li> &ndash; French: native speaker.</li></ul>'
+        content: '<ul class="no-bullet-list"><li> &ndash; English: fluent speaker, reader, and writer,</li><li> &ndash; French: native speaker.</li></ul>'
       },
       {
         key: 'Computer Science',
-        content: '<b>Keywords and Languages: GNU/Linux, Agility, Node.js, Python, Backbone.js, MongoDB, RethinkDB, Git. </b>'
+        content: '<b>Keywords and Languages: GNU/Linux, Agility, REST, Git, Javascript (Node.js), Python, Docker, MongoDB, RethinkDB, redis, levelDB. </b>'
       }
     ]
   },
@@ -26,7 +22,7 @@ module.exports = {
     content: [
       {
         key: 'From June 2013 to December 2013',
-        content: '<b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>The folks at Work4 Labs make a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; Integration of our partner and client information into our system,</li><li> &ndash; Development and Implementation of specific options and plugins, tailored for our clients,</li><li> &ndash; Monitoring and Maintenance on existing integrations,</li><li> &ndash; Continuous Integration, Development and Maintenance on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).'
+        content: '<b>Software Engineer Intern</b> at <b>Work4 Labs, The #1 Facebook Recruiting Solution</b>, in Paris, France.</p><p>The folks at Work4 Labs make a great Facebook application to enable companies to recruit talented people in a smarter way and they&#8217;re pioneering the world of Social Recruiting!</p><p>What I did: <ul class="no-bullet-list"><li> &ndash; <b>Integration</b> of our partner and client information into our system,</li><li> &ndash; <b>Development and Implementation</b> of specific plugins and options, tailored for our clients,</li><li> &ndash; <b>Monitoring and Maintenance</b> on existing integrations,</li><li> &ndash; <b>Continuous Integration, Development and Maintenance</b> on our backend platform and server.</li></ul></p><p>Technological platform: Python, MongoDB (+Twisted, Redis, Node.js, ...).'
       },
       {
         key: 'July &ndash; August 2012',
@@ -57,12 +53,12 @@ module.exports = {
     id: 'now',
     name: 'INSA Lyon',
     image: 'insa.png',
-    content: 'I&#8217;m currently studying at INSA de Lyon in France, preparing a MSc. in Telecommunications. <br/>I&#8217;m in my last term.'
+    content: 'I&#8217;ve finished my studies at INSA de Lyon in France, and will graduate in early September.<br/>'
   },
   interests: {
     heading: 'Topics of interests',
     id: 'interests',
-    content: 'Computers, reading, music, ice skating, trekking, cycling.'
+    content: 'Computers, reading, music, running (personal record 10+mi. in 1h40m), ice skating, trekking.'
   },
   places: {
     heading: 'Where I&#39;ve lived / traveled',

@@ -77,6 +77,18 @@
   color: #D9534F;
 }
 
+.header-li {
+  display: inline-block;
+  margin-left:5px;
+  margin-right: 5px;
+}
+
+.header-ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+}
+
 @media screen and (min-width: 1200px) {
   body {
     font-weight: 300;
@@ -144,8 +156,6 @@
 
   .header-link {
     color: #F5F7FA;
-    margin-left:5px;
-    margin-right:5px;
   }
 
   .mobile-block {
@@ -205,8 +215,6 @@
 
   .header-link {
     color: #555;
-    margin-left:5px;
-    margin-right:5px;
   }
 
   .mobile-block {
