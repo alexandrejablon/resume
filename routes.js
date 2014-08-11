@@ -2,7 +2,7 @@ var crypto = require('crypto');
 var _ = require('underscore');
 var nodemailer = require("nodemailer");
 var content = require("./content.js");
-var pass = process.env.MAIL_PASSWD;
+var pass = require ('./secrets').gmailPassword;
 
 // Redis stuff
 // Redis is used to prevent mail flooding from a single ip address
