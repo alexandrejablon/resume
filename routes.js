@@ -2,12 +2,13 @@ var crypto = require('crypto');
 var _ = require('underscore');
 var nodemailer = require("nodemailer");
 var content = require("./content.js");
-var pass = require ('./secrets').gmailPassword;
+var gmailPassword = require ('./secrets').gmailPassword;
+var redisAddr = process.env.REDIS_PORT_6379_TCP_ADDR;
 
 // Redis stuff
 // Redis is used to prevent mail flooding from a single ip address
 var redis = require("redis"),
-    client = redis.createClient('6379', 'localhost');
+    client = redis.createClient('6379', redisAddr);
 
 client.on("error", function (err) {
   console.log("Error " + err);
@@ -58,7 +59,7 @@ var send_email = exports.send_email = function (data, callback) {
     service: "Gmail",
     auth: {
       user: "alexandre.jablon.resume@gmail.com",
-      pass: pass
+      pass: gmailPassword
     }
   });
   var mailOptions = {
