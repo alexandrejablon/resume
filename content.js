@@ -165,14 +165,6 @@ module.exports = {
       {
         name: 'Inkscape',
         icon: 'inkscape',
-      },
-      {
-        name: 'Mac OS X',
-        icon: 'osx',
-      },
-      {
-        name: 'Vim',
-        icon: 'vim',
       }
     ]
   }
