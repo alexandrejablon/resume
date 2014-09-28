@@ -19,11 +19,11 @@ app.use ('/static/libs', express.static (__dirname + '/static/libs'));
 app.get ('/', routes.render);
 app.get ('/get_resume', routes.get_resume);
 app.post ('/blob', routes.blob);
-app.get ('/robots.txt', routes.robots);
+app.get ('/robots.txt', routes._robots);
 app.get ('/linkedin', routes.linkedin);
 app.get ('/github', routes.github);
 app.get ('/npm', routes.npm);
-app.get ('/keybase.txt', routes.keybase_txt);
+app.get ('/keybase.txt', routes._keybase);
 app.get ('/keybase', routes.keybase);
 
 app.get ('*', routes.fourofour);

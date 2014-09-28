@@ -7,22 +7,22 @@ var redisAddr = process.env.REDIS_PORT_6379_TCP_ADDR;
 
 // Redis stuff
 // Redis is used to prevent mail flooding from a single ip address
-var redis = require("redis"),
-    client = redis.createClient('6379', redisAddr);
+var redis = require ("redis"),
+    client = redis.createClient ('6379', redisAddr);
 
-client.on("error", function (err) {
-  console.log("Error " + err);
+client.on ("error", function (err) {
+  console.log ("Error " + err);
 });
 
-var render = exports.render = function (req, res) {
+var render = function (req, res) {
   res.sendfile(__dirname + '/static/views/resume.html');
 };
 
-var get_resume = exports.get_resume = function (req, res) {
+var get_resume = function (req, res) {
   res.json (content);
 };
 
-var blob = exports.blob = function (req, res) {
+var blob = function (req, res) {
   store_ip_hash (req.ip, function (redis_err, redis_res) {
     if (redis_err) {
       res.send ({ 'status': 0 });
@@ -47,14 +47,14 @@ var blob = exports.blob = function (req, res) {
   });
 };
 
-var store_ip_hash = exports.store_ip_hash = function (ip, callback) {
+var store_ip_hash = function (ip, callback) {
   var ip_h = crypto.createHash ('sha1').update (ip).digest ('hex').substring (0, 8);
   client.set(ip_h, 'OK', 'EX', 60, 'NX', function (err, res) {
     callback (err, res);
   });
 };
 
-var send_email = exports.send_email = function (data, callback) {
+var send_email = function (data, callback) {
   var smtpTransport = nodemailer.createTransport ("SMTP", {
     service: "Gmail",
     auth: {
@@ -71,31 +71,46 @@ var send_email = exports.send_email = function (data, callback) {
   smtpTransport.sendMail (mailOptions, callback);
 };
 
-var robots = exports.robots = function (req, res) {
+var _robots = function (req, res) {
   res.set ('Content-Type', 'text/plain');
   res.send (200, 'User-agent: Googlebot\nAllow: /\nUser-agent: *\nDisallow: /');
 };
 
-var fourofour = exports.fourofour = function (req, res) {
+var fourofour = function (req, res) {
   res.status (404).sendfile (__dirname + '/static/views/404.html');
 };
 
-var linkedin = exports.linkedin = function (req, res) {
+var linkedin = function (req, res) {
   res.redirect ('http://www.linkedin.com/in/alexjablon');
 };
 
-var github = exports.github = function (req, res) {
+var github = function (req, res) {
   res.redirect ('http://github.com/alexjab');
 };
 
-var npm = exports.npm = function (req, res) {
+var npm = function (req, res) {
   res.redirect ('http://npmjs.org/~alexjab');
 };
 
-var keybase_txt = exports.keybase_txt = function (req, res) {
+var _keybase = function (req, res) {
   res.sendfile (__dirname + '/static/views/keybase.txt');
 };
 
-var keybase = exports.keybase = function (req, res) {
+var keybase = function (req, res) {
   res.redirect ('https://keybase.io/alexjab');
+};
+
+module.exports = {
+  render: render,
+  get_resume: get_resume,
+  blob: blob,
+  store_ip_hash: store_ip_hash,
+  send_email: send_email,
+  _robots: _robots,
+  fourofour: fourofour,
+  linkedin: linkedin,
+  github: github,
+  npm: npm,
+  _keybase: _keybase,
+  keybase: keybase
 };
