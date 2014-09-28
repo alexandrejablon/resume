@@ -92,6 +92,10 @@ var npm = exports.npm = function (req, res) {
   res.redirect ('http://npmjs.org/~alexjab');
 };
 
-var keybase = exports.keybase = function (req, res) {
+var keybase_txt = exports.keybase_txt = function (req, res) {
   res.sendfile (__dirname + '/static/views/keybase.txt');
+};
+
+var keybase = exports.keybase = function (req, res) {
+  res.redirect ('https://keybase.io/alexjab');
 };

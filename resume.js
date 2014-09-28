@@ -23,7 +23,8 @@ app.get ('/robots.txt', routes.robots);
 app.get ('/linkedin', routes.linkedin);
 app.get ('/github', routes.github);
 app.get ('/npm', routes.npm);
-app.get ('/keybase.txt', routes.keybase);
+app.get ('/keybase.txt', routes.keybase_txt);
+app.get ('/keybase', routes.keybase);
 
 app.get ('*', routes.fourofour);
 
