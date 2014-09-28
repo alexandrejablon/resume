@@ -77,7 +77,7 @@ var robots = exports.robots = function (req, res) {
 };
 
 var fourofour = exports.fourofour = function (req, res) {
-  res.status (404).sendfile(__dirname + '/static/views/404.html');
+  res.status (404).sendfile (__dirname + '/static/views/404.html');
 };
 
 var linkedin = exports.linkedin = function (req, res) {
@@ -90,4 +90,8 @@ var github = exports.github = function (req, res) {
 
 var npm = exports.npm = function (req, res) {
   res.redirect ('http://npmjs.org/~alexjab');
+};
+
+var keybase = exports.keybase = function (req, res) {
+  res.sendfile (__dirname + '/static/views/keybase.txt');
 };

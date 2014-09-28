@@ -1,10 +1,13 @@
 start:
+	node resume.js
+
+startd:
 	forever -o out.log -e err.log start resume.js
 
-stop:
+stopd:
 	forever stop resume.js
 
-restart:
+restartd:
 	forever -o out.log -e err.log restart resume.js -l log.log -o out.log -e err.log
 
 list:
