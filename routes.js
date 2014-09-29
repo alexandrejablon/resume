@@ -93,7 +93,7 @@ var npm = function (req, res) {
 };
 
 var _keybase = function (req, res) {
-  res.sendfile (__dirname + '/static/views/keybase.txt');
+  res.sendfile (__dirname + '/keybase/keybase.txt');
 };
 
 var keybase = function (req, res) {
