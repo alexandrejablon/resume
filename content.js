@@ -53,7 +53,7 @@ module.exports = {
     id: 'now',
     name: 'INSA Lyon',
     image: 'insa.png',
-    content: 'I&#8217;ve finished my studies at INSA de Lyon in France, and will graduate in early September.<br/>'
+    content: 'I&#8217;ve just finished my studies at INSA de Lyon in France, and have graduated in mid-September.<br/>'
   },
   interests: {
     heading: 'Topics of interests',
