@@ -4,7 +4,7 @@ module.exports = {
     id: 'education',
     content: [
       {
-        key: 'Since 2011',
+        key: 'From 2011 to 2014',
         content: '<b>MSc. (class of 2014)</b> at the Department of <b>Telecommunications, Services and Applications</b> at INSA de Lyon (National Institute of Technology of Lyon, France):</p><p><ul class="no-bullet-list"><li> &ndash; <b>Computer Science</b>: Operating Systems, Programming, Web,</li><li> &ndash; <b>Networks</b>: Computer Networking, Wireless Networking, P2P, ADSL, Sensor Networks,</li><li> &ndash; <b>Telecommunications</b>: Communication Theory, Signal Processing, RF Equipements,</li><li> &ndash; <b>Management</b>: Industrial, Technology and Information Systems.</li></ul></p><p>In 2012 – 2013, academic exchange year at Tampere University of Technology in Tampere, Finland.'
       },
       {
