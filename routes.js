@@ -2,7 +2,12 @@ var crypto = require('crypto');
 var _ = require('underscore');
 var nodemailer = require("nodemailer");
 var content = require("./content.js");
-var gmailPassword = require ('./secrets').gmailPassword;
+var gmailPassword;
+if (process.env.NODE_ENV !== 'test') {
+  gmailPassword = require ('./secrets').gmailPassword;
+} else {
+  gmailPassword = '';
+}
 var redisAddr = process.env.REDIS_PORT_6379_TCP_ADDR;
 
 // Redis stuff
