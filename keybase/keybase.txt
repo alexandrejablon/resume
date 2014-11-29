@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/alexjab
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jablon.me
+  * I am alexjab (https://keybase.io/alexjab) on keybase.
+  * I have a public key with fingerprint 65E2 6703 4E4F 12AD 2D60  B789 2E02 612B 8349 FA6A
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.2"
+        },
+        "key": {
+            "fingerprint": "65e267034e4f12ad2d60b7892e02612b8349fa6a",
+            "host": "keybase.io",
+            "key_id": "2E02612B8349FA6A",
+            "uid": "fac9b86e0f16761e9c8e33cb20797c00",
+            "username": "alexjab"
+        },
+        "merkle_root": {
+            "ctime": 1412000839,
+            "hash": "aa075cc8b6d5e143b1f50df4544ab3a068e228ee2a0e204cc4654b34884d66170bc5a7c1bf0035bc722c3a513dbd59c5e0bdfd3134a330afb7bcc58bdf2924cd",
+            "seqno": 64837
+        },
+        "service": {
+            "hostname": "jablon.me",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1412001087,
+    "expire_in": 157680000,
+    "prev": "e9f0f0e74c0b89d0458a8c30e3363b6f145437c5d8514da40e49fb664984956f",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkn9QFVUUxx8PNVKTUkJoYNAtDeX1uPt7F1OGQlTSwkLwofDYe/cu7APe0ntP
+EBjUBkHCkh8hDs1EwWQQJoRJg+IQIoM2ZAzplIUThv2ADCfEGmVkaJehKf8799zP
+/d7zPedUPOZtMntZzVJY0ZYph1f/GDTFr8mKLCCgJucREQUEylSx02NETikLExFE
+Bs6DkhtbVW2FU5Ox1eFeMcdYiBzscquaU6eAlbdSRKHFwI3HiupMw65sl2poERyL
+KY4HNIMZhaQkmZI5AHlBpDCgOJKCAs2IisRJumS65vY89Csxq2lXZT1LbZzlXzD4
+mCguSr/bM3uhSEiEAoeBQnI8R2IRCZimEaQAL/IIAAN0Y9ecJSkT73VI0Cg3C7sy
+MrHdpWmznpFHNQiSISkAgECLekGSO914IwGeRUiAnMxikqEhqbBAVhiWYSRIS4AT
+MEUJGFMSwBRgEGI4loE0IwiMzHEkDyBiJR6RUAGAZiHiKQrREkvSMpRZEbEYQFmR
+aZJmJJoGkgJ5iBAr6ElKpBgk6w7c+HWnRkRwjEDzhcbRlaMibJRtNG3Om+4rU3Na
+9dhCZLs0j4a0TD2d7vFkRxiGPXnZBpaLoX1WoAlhO1Sdsj6v/w+U1NGHmkECgbcQ
+eG+26sJ21SBYnhP0JgHjH5yja2JRAQrAPIMAFEQZMKwgCYgG+iQ4GnIKqTeL5hEr
+CyzJyBIDsD51yHGMKDAiyyn/WaT1OqU0XdKtpjklzx4XJgrfNAfNM3mZTQvmm42N
+NS189PF/1/jpBN+Z+KD8Kaetpjg4v7/0L5+fmUtn4oD7sG3imeaK3l0fJcCl0dfr
+jkyHmj9A/ZG9YVOF06tb1+bP+/3XcduOEqFLHDwWZv+cahvqvSgXFR9ssjUkt+2e
+7BXTQiajT8avOuc8MFm3vvT9mcNXK9NHd99oRsNefraAywH9iUt6rqnlZXx4fsof
+Nfcivh15qr1r4toPwHzb8mGPLzdQX9PqVX78xGvD+ywz90dyH0gBG5aG7ntOi+xL
+Xd9O1a4telcY+Cr2kcFY352hS9Qrr/ioDStf8nedu1tQmnxhZFlK01shVdt2weSz
+2pXRKtW/b2q0ftWpOz9dH1MWEyEZ3Ytv8x2R333mz0V7O+ZfiD9TUBm06O6nlpvm
+L55f5FO/PHuGmhAujxWXb956MaNksyev8LxP35PszIah1X5fp4bcWAPljvB3umTh
+vZjoW9VT48+a2LLxY+VssqfugXfFnUOtR6O+TKrcfr7I3d/ZEhjT3cNb9/sGXS0/
+PcrltnQ3Bv9de+/I1hPbOgKnw3lH3k621q8/dtOW7aU9g1kbvaM2hRxq/3Ogofpo
+/Q6fF6tQVs3wb283pSWmnLq5LClufMi37OXQ3u+7Bj4e/uaTzoUtyU841jnaPPed
+IcdXJhYtOHn6l5IfG1ISmw9M+wbemm68ZE569WxpQm51e+q6xsE39tk644K7+/oc
+yyeF+v1JMan/AA==
+=wg9r
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alexjab
+
+==================================================================
