@@ -1,5 +1,5 @@
 ResumeModel = Backbone.Model.extend({
-  urlRoot : '/get_resume'
+  urlRoot : '/api/resume'
 });
 
 ResumeView = Backbone.View.extend({
@@ -60,7 +60,7 @@ ResumeView = Backbone.View.extend({
       var self = this;
       $.ajax ({
         type: "POST",
-        url: '/blob',
+        url: '/api/email',
         data: {blobFrom: blobFrom, blobContent: blobContent},
         success: function (response) {
           var variables = response;
