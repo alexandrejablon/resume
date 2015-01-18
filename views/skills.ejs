@@ -1,0 +1,22 @@
+<div class="resume-well">
+  <!-- Skills section -->
+  <div class="row resume-heading align-center">
+    <div class="col-lg-12">My skills</div>
+  </div>
+  <div data-bind="with: skillsViewModel">
+    <div data-bind="foreach: skills">
+      <div class="row resume-row" data-bind="foreach: $data">
+
+        <div class="col-lg-3 col-xs-3 align-center">
+          <img class="img-thumbnail tooltip-origin" data-bind="attr: { src: '/static/img/' + icon + '.png', alt: name, title: name }" data-placement="bottom"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div>
+    ... as well as many other things !
+  </div>
+</div>
+
+<hr class="separator"/>

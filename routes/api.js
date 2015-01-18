@@ -1,6 +1,11 @@
 var crypto = require ('crypto');
 
+var async = require ('async');
+
+// Redis is used to prevent mail flooding from a single ip address
 var redis = require ('redis');
+var client = redis.createClient ('6379');
+
 var nodemailer = require ('nodemailer');
 
 var content = require ('../content.js');
@@ -12,51 +17,68 @@ var getResume = module.exports.getResume = function (req, res) {
 };
 
 var postEmail = module.exports.postEmail = function (req, res) {
-  storeIpHash (req.ip, function (redis_err, redis_res) {
-    if (redis_err) {
-      res.send ({ 'status': 0 });
-    } else {
-      if (redis_res === null) {
-        res.send ({ 'status': 3 });
+  var from = req.body.from;
+  var text = req.body.text;
+  async.waterfall ([
+    function (next) {
+      if (!from || !text) {
+        next (new Error ('Missing from or text'));
       } else {
-        var from = req.body.blobFrom, content = req.body.blobContent;
-        if (from && content) {
-          sendEmail ({'from': from, 'content': content}, function (error) {
-            if (error) {
-              res.send ({ 'status': 0 });
-            } else {
-              res.send ({ 'status': 1 });
-            }
-          });
-        } else {
-          res.send ({'status': 2});
-        }
+        next (null);
       }
+    },
+    function (next) {
+      storeIpHash (req.ip, function (err, res) {
+        next (err, res);
+      });
+    },
+    function (stored, next) {
+      if (!stored) {
+        next (null, null);
+      } else {
+        sendEmail ({ 'from': from, 'text': text }, function (error, info) {
+          next (error, stored, info);
+        });
+      }
+    }
+  ], function (error, stored, info) {
+    if (error) {
+      if (error.toString () === 'Error: Missing from or text') {
+        res.send ({ 'status': 2 });
+      } else {
+        res.send ({ 'status': 0 });
+      }
+    } else if (!stored) {
+      res.send ({ 'status': 3 });
+    } else {
+      res.send ({ 'status': 1 });
     }
   });
 };
 
 var storeIpHash = module.exports.storeIpHash = function (ip, callback) {
-  var ip_h = crypto.createHash ('sha1').update (ip).digest ('hex').substring (0, 8);
-  client.set(ip_h, 'OK', 'EX', 60, 'NX', function (err, res) {
+  var ipHash = crypto.createHash ('sha1').update (ip).digest ('hex').substring (0, 8);
+  client.set (ipHash, 'OK', 'EX', 60, 'NX', function (err, res) {
     callback (err, res);
   });
 };
 
 var sendEmail = module.exports.sendEmail = function (data, callback) {
-  var smtpTransport = nodemailer.createTransport ("SMTP", {
-    service: "Gmail",
+  var transporter = nodemailer.createTransport ({
+    service: 'Gmail',
     auth: {
-      user: "alexandre.jablon.resume@gmail.com",
-      pass: gmailPassword
+      user: 'alexandre.jablon.resume@gmail.com',
+      pass: gmailPassword 
     }
   });
   var mailOptions = {
-    from: "My Resume <alexandre.jablon.resume@gmail.com>",
-    to: "alex+resume@jablon.me",
-    subject: "Someone has sent you something from your resume",
-    html: "<b>From:</b> " + data.from + "<br/><br/><b>Content:</b> <br/>" + data.content
+    from: 'My Resume <alexandre.jablon.resume@gmail.com>',
+    to: 'alex+resume@jablon.me',
+    subject: 'Someone has sent you something from your resume',
+    html: '<b>From:</b> ' + data.from + '<br/><br/><b>Content:</b> <br/>' + data.text
   };
-  smtpTransport.sendMail (mailOptions, callback);
+  transporter.sendMail (mailOptions, function (error, info) {
+    callback (error, info);
+  });
 };
 

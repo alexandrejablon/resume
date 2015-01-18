@@ -1,0 +1,24 @@
+<div class="resume-well">
+  <!-- Projects section -->
+  <div class="row resume-heading align-center">
+    <div class="col-lg-12">Real-life / non-school team projects</div>
+  </div>
+  <div class="row resume-row">
+    <div class="col-lg-12" data-bind="with: projectsViewModel">
+      <div data-bind="foreach: projects">
+        <div class="col-lg-2">
+          <div class="resume-padding-18">
+            <b data-bind="text: date"></b>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <div class="resume-padding-18" style="border-left: 3px solid lightgrey">
+            <p data-bind="html: description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="separator"/>

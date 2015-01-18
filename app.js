@@ -13,6 +13,7 @@ app.use ('/static/img', express.static (__dirname + '/static/img'));
 app.use ('/static/js', express.static (__dirname + '/static/js'));
 app.use ('/static/fonts', express.static (__dirname + '/static/fonts'));
 app.use ('/static/libs', express.static (__dirname + '/static/libs'));
+app.use ('/client', express.static (__dirname + '/client'));
 
 app.get ('/api/resume', routes.api.getResume);
 app.post ('/api/email', routes.api.postEmail);

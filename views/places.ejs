@@ -1,0 +1,19 @@
+<div class="resume-well">
+  <!-- Places section -->
+  <div class="row resume-heading align-center">
+    <div class="col-lg-12">Where I&#39;ve lived / traveled</div>
+  </div>
+  <div class="row resume-row">
+  <div id="map-small" class="col-xs-12">
+    <img class="img-responsive" src="/static/img/map_small.jpg" />
+  </div>
+    <div id="map-large" class="col-lg-12" data-bind="with: placesViewModel">
+      <div data-bind="foreach: places">
+          <img class="tooltip-origin" data-bind="attr: { src: '/static/img/' + type + '.png', style: 'position: absolute; margin-left: ' + (xcoord - 17) + 'px; margin-top: ' + (ycoord - 40) + 'px;', alt: name, title: name }" data-toggle="tooltip" />
+      </div>
+    <img src="/static/img/map_large.jpg" />
+    </div>
+  </div>
+</div>
+
+<hr class="separator"/>

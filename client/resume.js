@@ -1,76 +1,30 @@
-ResumeModel = Backbone.Model.extend({
-  urlRoot : '/api/resume'
-});
+var ResumeViewModel = function () {
+  this.educationViewModel = new EducationViewModel ();
+  this.experienceViewModel = new ExperienceViewModel ();
+  this.skillsViewModel = new SkillsViewModel ();
+  this.projectsViewModel = new ProjectsViewModel ();
+  this.nowViewModel = new NowViewModel ();
+  this.placesViewModel = new PlacesViewModel ();
+  this.interestsViewModel = new InterestsViewModel ();
+  this.contactViewModel = new ContactViewModel ();
 
-ResumeView = Backbone.View.extend({
-  el: $('#resume'),
-  events: {
-    'click .btn-toggle-content': 'toggleInfo',
-    'click #btn-toggle-blob': 'toggleBlob',
-    'click #btn-send-blob': 'sendBlob'
-  },
-  initialize: function () {
-    _.bindAll(this, 'render');  
-    this.model.bind('change', this.render);  
-    this.$el.html ('<div class="resume-well"><div class="resume-heading" style="text-align:center">Loading...</div></div>');
-    this.model.fetch ();
-  },
-  render: function () {
-    var variables = this.model.attributes;
+  this.getResumeData ();
+};
 
-    var template = _.template($("#resume-template").html(), variables);
-    this.$el.html(template);
-    
-    this.$(".tooltip-origin").tooltip();
-  },
-  toggleInfo: function (event) {
-    item_name = event.currentTarget.dataset.content;
-    this.$('.' + item_name + '-hideable').slideToggle("slow");
-    this.$('.btn-icon-' + item_name).toggleClass ('glyphicon-chevron-down');
-    this.$('.btn-icon-' + item_name).toggleClass ('glyphicon-chevron-up');
-    this.$('.btn-text-' + item_name).toggle ();
-  },
-  toggleBlob: function (event) {
-    this.$('#toggle-blob-row').slideToggle ('slow');
-  },
-  sendBlob: function (event) {
-    var blobFrom = this.$('#blobFrom').val ();
-    var blobContent = this.$('#blobContent').val ();
-    var error = false;
-    if (blobFrom === "") {
-      error = true;
-      this.$('#blob-from-error').html ('This field must not be empty!');
-      this.$('#form-group-blob-from').addClass ('has-error');
-    } else {
-      this.$('#blob-from-error').html ('');
-      this.$('#form-group-blob-from').removeClass ('has-error');
+ResumeViewModel.prototype.getResumeData = function () {
+  var that = this;
+
+  http.get ('/api/resume', function (err, res) {
+    if (!err) {
+      that.educationViewModel.render (res.education);
+      that.experienceViewModel.render (res.experience);
+      that.skillsViewModel.render (res.skills);
+      that.nowViewModel.render (res.now);
+      that.placesViewModel.render (res.places);
+      that.projectsViewModel.render (res.projects);
+      that.interestsViewModel.render (res.interests);
     }
-    if (blobContent === "") {
-      error = true;
-      this.$('#blob-content-error').html ('This field must not be empty!');
-      this.$('#form-group-blob-content').addClass ('has-error');
-    } else {
-      this.$('#blob-content-error').html ('');
-      this.$('#form-group-blob-content').removeClass ('has-error');
-    }
+  });
+};
 
-    if (!error) {
-      var template = _.template($("#blob-template").html(), { status: 42 });
-      this.$('#blob-status').html(template);
-      var self = this;
-      $.ajax ({
-        type: "POST",
-        url: '/api/email',
-        data: {blobFrom: blobFrom, blobContent: blobContent},
-        success: function (response) {
-          var variables = response;
-          var template = _.template($("#blob-template").html(), variables);
-          self.$('#blob-status').html(template);
-        }
-      });
-    }
-  }
-});
-
-var resume_view = new ResumeView ( { model: new ResumeModel () } );
-
+ko.applyBindings (new ResumeViewModel ());

@@ -1,11 +1,11 @@
 var path = require ('path');
 
 var renderHome = module.exports.renderHome = function (req, res) {
-  res.sendFile (path.resolve ('views/resume.html'));
+  res.render (path.resolve ('views/index.ejs'));
 };
 
 var fourofour = module.exports.fourofour = function (req, res) {
-  res.status (404).sendFile (path.resolve ('views/404.html'));
+  res.status (404).render (path.resolve ('views/404.ejs'));
 };
 
 var robots = module.exports.robots = function (req, res) {
