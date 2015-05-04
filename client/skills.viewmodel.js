@@ -11,4 +11,5 @@ SkillsViewModel.prototype.render = function (data) {
     lines[lines.length-1].push (data[i]);
   }
   this.skills (lines);
+  $ (".tooltip-origin").tooltip ();
 };

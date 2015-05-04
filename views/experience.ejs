@@ -5,7 +5,7 @@
   </div>
 
   <div data-bind="foreach: experiences">
-    <div class="row resume-row">
+    <div class="row resume-row" data-bind="visible: !$index () || $parent.showMore ()">
       <div class="col-lg-2">
         <div class="resume-padding-18">
           <b data-bind="html: date"></b>
@@ -17,6 +17,22 @@
         </div>
       </div>
     </div>
+    
+    <div class="row resume-row" data-bind="ifnot: $index">
+      <div class="col-lg-12 align-center">
+        <span type="button" class="btn btn-toggle-content btn-success" data-bind="click: function () { $parent.toggleShowMore () }">
+          <span data-bind="text: $parent.showButtonText"></span>
+          <span data-bind="attr: { class: $parent.showButtonChevron }"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="row resume-row" data-bind="visible: $parent.showMore () && $index () && $index () < $parent.experiences ().length - 1">
+      <div class="col-lg-12 align-center">
+        <div> &mdash; </div>
+      </div>
+    </div>
+
   </div>
 
 </div>

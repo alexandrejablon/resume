@@ -4,4 +4,5 @@ var PlacesViewModel = function () {
 
 PlacesViewModel.prototype.render = function (data) {
   this.places (data);
+  $ (".tooltip-origin").tooltip ();
 };

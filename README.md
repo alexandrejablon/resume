@@ -2,7 +2,7 @@ resume
 ======
 
 
-This is my online résumé, available at http://alex.jablon.me
+This is my online résumé, available at http://jablon.me
 
 License: DBAD
 

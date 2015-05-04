@@ -28,3 +28,4 @@ ResumeViewModel.prototype.getResumeData = function () {
 };
 
 ko.applyBindings (new ResumeViewModel ());
+
