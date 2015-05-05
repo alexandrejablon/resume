@@ -81,11 +81,11 @@ module.exports = {
   ],
   now: {
     image: {
-      name: 'insa.png',
-      alt: 'INSA Lyon',
-      title: 'INSA Lyon'
+      name: 'cp.png',
+      alt: 'Chauffeur-Privé.com',
+      title: 'Chauffeur-Privé.com'
     },
-    description: 'I&#8217;ve just finished my studies at <i>INSA de Lyon</i> in France, and have graduated in mid-September.<br/>'
+    description: 'I&#8217;ve graduated from <b><i>INSA de Lyon</i></b> in France in September, and I now am a <b>Software Engineer</b> at <b>Chauffeur-Privé.com</b>'
   },
   places: [
     {
